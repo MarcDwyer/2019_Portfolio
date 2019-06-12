@@ -1,14 +1,21 @@
 .master-nav {
     display: flex;
-    flex-direction: column;
-    background-color: #2B373F;
+    background-color: transparent;
     color: rgba(255, 255, 255, 0.8);
-    flex: 0 0 350px;
-    position: relative;
+    width: 400px;
+    height: 100vh;
 
-    div {
+    .animated-nav {
+        background-color: #2B373F;
+        height: 100%;
         margin: auto;
+        display: flex;
+        width: 100%;
+        position: relative;
 
+        .subDiv {
+            margin: auto;
+        }
         img {
             width: 250px;
             height: 250px;

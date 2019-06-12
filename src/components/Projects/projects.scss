@@ -16,6 +16,13 @@
             padding: 15px 15px;
             width: 85%;
 
+            h2 {
+                small { 
+                    font-style: italic;
+                    font-size: 14px;
+                }
+            }
+
             img {
                 border-radius: 5px;
                 width: 550px;
