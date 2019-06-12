@@ -1,0 +1,60 @@
+.master-projects {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+
+    .project {
+        display: flex;
+        width: 100%;
+        border-bottom: 1px solid black;
+
+
+        .proj {
+            display: flex;
+            margin: 0 auto 10px auto;
+            padding: 15px 15px;
+            width: 85%;
+
+            img {
+                border-radius: 5px;
+                width: 550px;
+                height: 350px;
+                margin: auto;
+            }
+
+            .body {
+                display: flex;
+                flex-direction: column;
+                width: 45%;
+                margin: auto;
+
+
+                span {
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+
+.even {
+    
+    img {
+        order: 0;
+    }
+
+    .body {
+        order: 1;
+    }
+}
+
+.odd {
+    .body {
+        order: 0;
+    }
+    img {
+        order: 1
+    }
+}
