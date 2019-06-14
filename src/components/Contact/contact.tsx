@@ -14,8 +14,8 @@ const Contact = () => {
     })
 
     return (
-        <div className="contact">
-            <animated.div className="sub-contact" style={subProps}>
+        <div className="master contact">
+            <animated.div className="sub-contact card" style={subProps}>
                 <span>Marc Dwyer</span>
                 <div className="contact-info">
                     <div className="email">

@@ -1,0 +1,48 @@
+.work {
+    color: rgb(103, 103, 103);
+
+    .card-flex {
+        display: flex;
+        margin: auto;
+        flex-wrap: wrap;
+
+        .work-card {
+            border-radius: 0;
+            width: 25%;
+            overflow-y: auto;
+            text-align: center;
+            height: 220px;
+
+            h2 {
+                padding: 10px 10px;
+                border-radius: 2px;
+                border-bottom: 2px solid #66B2B2;
+            }
+
+            .inner-content {
+                margin: auto;
+                display: flex;
+                width: 90%;
+                flex-direction: column;
+
+                span {
+                    font-weight: 600;
+                }
+            }
+
+            @media (max-width: 1650px) {
+                & {
+                    width: 40%;
+                    margin: 15px auto 15px auto;
+                }
+            }
+            
+            @media (max-width: 850px) {
+                & {
+                    width: 75%;
+                    margin: 15px auto 15px auto;
+                }
+            }
+        }
+    }
+}

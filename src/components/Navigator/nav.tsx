@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { withRouter, Link } from 'react-router-dom'
 import { RouteComponentProps } from 'react-router'
 import './nav.scss'
@@ -7,21 +7,23 @@ import { useSpring, animated } from 'react-spring'
 
 interface Props extends RouteComponentProps {
     route: string | null;
+    clicked: boolean;
+    setClicked: Function;
 }
 
 const Nav = (props: Props) => {
 
+    let navDiv = useRef<HTMLDivElement | null>(null)
     const sprProps = useSpring({
         opacity: 1,
-        marginLeft: "0",
-        from: { opacity: 0, marginLeft: "-350" },
+        transform: "translateX(0%)",
+        from: { opacity: 0, transform: "translateX(-100%)"},
         delay: 200
     })
 
     return (
-        <div className="master-nav">
-            <animated.div className={`animated-nav ${props.route}-nav`} style={sprProps}>
-            <i className="fa fa-bars" />
+        <animated.div className={`master-nav ${props.clicked ? "appear" : ""}`} style={sprProps} ref={navDiv}>
+            <div className={`animated-nav ${props.route}-nav`}>
                 <div className="subDiv">
                     <img src="https://s3.us-east-2.amazonaws.com/fetchappbucket/port/me.jpg" alt="me" />
                     <div className="inner-text">
@@ -37,6 +39,7 @@ const Nav = (props: Props) => {
                                     style={props.route === lowerStr || (lowerStr === "home" && !props.route) ? { color: "rgba(255,255,255,1)" } : {}}
                                     key={item}
                                     to={path}
+                                    onClick={() => props.setClicked(false)}
                                     className="linker"
                                 >
                                     {item}
@@ -61,8 +64,8 @@ const Nav = (props: Props) => {
                         </div>
                     </div>
                 </div>
-            </animated.div>
-        </div>
+            </div>
+        </animated.div>
     )
 }
 

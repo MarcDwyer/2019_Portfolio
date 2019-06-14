@@ -4,15 +4,21 @@
     display: flex;
     color: #eee;
     position: relative;
-    background-image: url("https://fetchappbucket.s3.us-east-2.amazonaws.com/port/nasapic.jpg");
     overflow-y: auto;
     height: 100vh;
-
+    
+     canvas{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
     .welcome {
         display: flex;
         text-align:center;
         flex-direction: column;
         margin: auto;
+        z-index: 2;
     
         span {
             font-weight: bold;
@@ -22,12 +28,11 @@
             margin-top: 15px !important;
             width: 125px;
             margin: auto;
-            outline: none;
-            border-radius: 2px;
+            border: none;
             background-color: #0069ff;
             color: #fff;
             font-weight: 600;
-            padding: 10px 10px;
+            padding: 15px 15px;
             opacity: 1;
 
             &:hover {

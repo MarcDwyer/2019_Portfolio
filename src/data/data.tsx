@@ -54,3 +54,29 @@ export const projectsData: Projects[] = [
         hosted: "Heroku"
     }
 ]
+interface WorkExperience {
+    companyName: string;
+    duration: number;
+    descriptionRole: string;
+    currentJob: boolean;
+}
+export const WorkExp: WorkExperience[] = [
+    {
+        companyName: "Best Buy Co",
+        duration: 1.5,
+        descriptionRole: "Primarily a customer-service role. Assisted with customers in finding/troubleshooting electronic devices.",
+        currentJob: false
+    },
+    {
+        companyName: "Whole Foods Co",
+        duration: 2,
+        descriptionRole: "Customer-service role. Work as a cashier as well as cleaning the dining room",
+        currentJob: true
+    },
+    {
+        companyName: "Publix Grocery Store",
+        duration: 1,
+        descriptionRole: "Worked primarily in the produce section. Organized the cooling room, checked produce expiration dates, and assuring the Produce section stays visually appealing.",
+        currentJob: false
+    }
+]

@@ -2,6 +2,7 @@ import React from 'react'
 import { animated, useSpring } from 'react-spring'
 import { Link } from 'react-router-dom'
 import { RouteComponentProps } from 'react-router'
+import Particles from 'react-particles-js'
 import './home.scss'
 
 const Home = (props: RouteComponentProps) => {
@@ -19,11 +20,13 @@ const Home = (props: RouteComponentProps) => {
     })
     return (
         <div className="home">
+            <Particles
+            />
             <animated.div className="welcome" style={welcomeProps}>
                 <span>Welcome to Marc Dwyer's portfolio!</span>
                 <Link
-                className="home-projects"
-                to="/projects"
+                    className="home-projects"
+                    to="/projects"
                 >
                     View Projects
                 </Link>

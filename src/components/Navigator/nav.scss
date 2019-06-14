@@ -2,9 +2,9 @@
     display: flex;
     background-color: transparent;
     color: rgba(255, 255, 255, 0.8);
-    flex: 0 0 350px;
     height: 100vh;
     position: relative;
+    flex: 0 0 350px;
 
     .links {
         display: flex;
@@ -30,14 +30,6 @@
         margin: auto;
         display: flex;
         width: 100%;
-
-        .fa-bars {
-            font-size: 28px;
-            position: absolute;
-            top: 10px;
-            display: none;
-            left: 10px;
-        }
 
         .subDiv {
             margin: auto;
@@ -72,6 +64,10 @@
             }
         }
     }
+    
+    @media (max-width: 1000px) {
+        display: none;
+    }
 }
 
 .app-links {
@@ -105,4 +101,8 @@
     to {
         text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
     }
+}
+
+.appear {
+    display: flex;
 }

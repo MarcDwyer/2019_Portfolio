@@ -4,20 +4,9 @@
     width: 100%;
     overflow-y: auto;
     color: rgb(103, 103, 103);
-    margin-top: 15px;
+    padding: 10px 10px;
+    background-color: #eee;
 
-    .header {
-        width: 100%;
-        display: flex;
-        font-size: 32px;
-        padding: 15px 15px;
-        height: 95px;
-        border-bottom: 1px solid black;
-
-        h2 {
-            margin: auto;
-        }
-    }
 
     .project {
         display: flex;
@@ -58,14 +47,17 @@
         }
     }
     @media (max-width: 1650px) {
-        
         .project {
-            
             .proj {
                 flex-direction: column;
 
-                img {
+                img, .tweeter {
                     order: 0;
+                    width: 75%;
+
+                    @media (max-width: 850px) {
+                        width: 100%;
+                    }
                 }
                 .body {
                     order: 1;
