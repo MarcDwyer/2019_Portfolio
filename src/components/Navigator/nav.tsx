@@ -9,18 +9,19 @@ interface Props extends RouteComponentProps {
     route: string | null;
 }
 
-
 const Nav = (props: Props) => {
 
     const sprProps = useSpring({
         opacity: 1,
         marginLeft: "0",
-        from: { opacity: 0, marginLeft: "-350px" }
+        from: { opacity: 0, marginLeft: "-350" },
+        delay: 200
     })
 
     return (
         <div className="master-nav">
-            <animated.div className="animated-nav" style={sprProps}>
+            <animated.div className={`animated-nav ${props.route}-nav`} style={sprProps}>
+            <i className="fa fa-bars" />
                 <div className="subDiv">
                     <img src="https://s3.us-east-2.amazonaws.com/fetchappbucket/port/me.jpg" alt="me" />
                     <div className="inner-text">
@@ -44,7 +45,7 @@ const Nav = (props: Props) => {
                         })}
                     </div>
                     <div className="links">
-                        <div className="sublinks">
+                        <div className={`sublinks ${props.route === "contact" ? "glow" : ""}`}>
                             <a
                                 href="https://github.com/MarcDwyer?tab=repositories"
                                 target="_blank"

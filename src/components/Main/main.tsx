@@ -5,8 +5,10 @@ import { match, RouteComponentProps } from 'react-router'
 import './main.scss'
 
 import Projects from '../Projects/projects'
+import Home from '../Home/home'
+import Contact from '../Contact/contact'
 
-export const Links = ["Home", "Contact"]
+export const Links = ["Home", "Projects", "Contact"]
 
 
 const checkRoute = (path: string): string | null => {
@@ -33,7 +35,9 @@ const Main = (props: RouteComponentProps) => {
         <div className="master-div">
             <Nav route={route} />
             <Switch>
-                <Route path="/" component={Projects} />
+                <Route path="/projects" component={Projects} />
+                <Route path="/contact" component={Contact} />
+                <Route path="/" component={Home} />
             </Switch>
         </div>
     )

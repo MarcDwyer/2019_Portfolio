@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: "proxima-nova", "proxima nova", "helvetica neue", "helvetica", "arial", sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -11,7 +11,12 @@ code {
 }
 
 .master-div {
+  overflow: hidden;
   display: flex;
   height: 100vh;
-  background-color: #D6D6D6 !important;
+  background-color: #eee !important;
+}
+
+a {
+  text-decoration: none;
 }

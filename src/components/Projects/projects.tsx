@@ -1,31 +1,60 @@
 import React from 'react'
 import './projects.scss'
 import { animated, useSpring } from 'react-spring'
-import { projects } from '../../data/data'
+import { Tweet } from 'react-twitter-widgets'
+import { projectsData } from '../../data/data'
 
 const Projects = () => {
+    const masterProp = useSpring({
+        opacity: 1,
+        from: { opacity: 0 }
+    })
+    const projProp = useSpring({
+        transform: "translateY(0%)",
+        from: {transform: "translateY(-100%)"}
+    })
     return (
-        <div className="master-projects">
-            {projects.map((item, i) => {
+        <animated.div className="master-projects" style={masterProp}>
+            {projectsData.map((item, i) => {
                 const int = i + 2
                 return (
-                    <animated.div className="project" key={item.url}>
+                    <animated.div className={`project ${int % 2 !== 0 ? "odd-par" : "even-par"}`} key={item.url} style={projProp}>
                         <div className={`proj ${int % 2 !== 0 ? "odd" : "even"}`}>
                             <div className="body">
-                                <h2>{item.title}
-                                    {item.ocean && (
-                                        <small> -- hosted on DigitalOcean</small>
-                                    )}
+                                <h2 className="title">{item.title}
+                                    <small> -- hosted on {item.hosted}</small>
                                 </h2>
+                                <div className="live-demo">
+                                    {item.links.map(i => {
+                                        const isLive = i.title.startsWith("Live")
+                                        return (
+                                            <a
+                                                href={i.link}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                key={i.link}
+                                                className={isLive ? "live-button" : ""}
+                                            >
+                                                {i.title}
+                                            </a>
+                                        )
+                                    })}
+                                </div>
                                 <span>Stack: {item.stack}</span>
                                 <p>{item.details}</p>
                             </div>
-                            <img src={item.url} alt="application" />
+                            {item.title.startsWith("GraphQL") ? (
+                                <div className="tweeter">
+                                    <Tweet tweetId={"1138879923362455553"} />
+                                </div>
+                             ) : (
+                                    <img src={item.url} alt="application" />
+                                )}
                         </div>
                     </animated.div>
                 )
             })}
-        </div>
+        </animated.div>
     )
 }
 
