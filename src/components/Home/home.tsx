@@ -23,7 +23,7 @@ const Home = (props: RouteComponentProps) => {
             <Particles
             />
             <animated.div className="welcome" style={welcomeProps}>
-                <span>Welcome to Marc Dwyer's portfolio!</span>
+                <span>Welcome to my portfolio!</span>
                 <Link
                     className="home-projects"
                     to="/projects"
