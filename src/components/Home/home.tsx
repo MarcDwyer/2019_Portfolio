@@ -11,19 +11,13 @@ const Home = (props: RouteComponentProps) => {
         opacity: 1,
         transform: "translateX(0%)",
         from: {transform: "translateX(100%)", opacity: 0 },
-        delay: 450
-    })
-    const welcomeProps = useSpring({
-        opacity: 1,
-        transform: "translateX(0%)",
-        from: { transform: "translateX(100%)", opacity: 0 },
-        delay: 450
+        delay: 250
     })
     return (
         <div className="home">
             <Particles
             />
-            <animated.div className="welcome" style={welcomeProps}>
+            <animated.div className="welcome" style={iProps}>
                 <span>Welcome to my portfolio!</span>
                 <Link
                     className="home-projects"
