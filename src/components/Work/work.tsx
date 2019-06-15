@@ -12,10 +12,10 @@ const Work = () => {
     })
     return (
         <div className="master work">
-            <div className="card-flex">
+            <animated.div className="card-flex" style={cardProps}>
                 {WorkExp.map(job => {
                     return (
-                        <animated.div className="card work-card" style={cardProps} key={job.companyName}>
+                        <div className="card work-card" style={cardProps} key={job.companyName}>
                             <h2>{job.companyName}</h2>
                             <div className="inner-content">
                                 {job.currentJob ? (
@@ -30,10 +30,10 @@ const Work = () => {
                                     {job.descriptionRole}
                                 </p>
                             </div>
-                        </animated.div>
+                        </div>
                     )
                 })}
-            </div>
+            </animated.div>
         </div>
     )
 }

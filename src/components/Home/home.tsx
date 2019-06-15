@@ -8,15 +8,16 @@ import './home.scss'
 const Home = (props: RouteComponentProps) => {
 
     const iProps = useSpring({
-        left: "5px",
         opacity: 1,
-        from: { left: "150px", opacity: 0 },
-        delay: 200
+        transform: "translateX(0%)",
+        from: {transform: "translateX(100%)", opacity: 0 },
+        delay: 450
     })
     const welcomeProps = useSpring({
         opacity: 1,
         transform: "translateX(0%)",
-        from: { transform: "translateX(100%)", opacity: 0 }
+        from: { transform: "translateX(100%)", opacity: 0 },
+        delay: 450
     })
     return (
         <div className="home">
