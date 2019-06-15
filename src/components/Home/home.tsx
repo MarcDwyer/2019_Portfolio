@@ -11,7 +11,7 @@ const Home = (props: RouteComponentProps) => {
         opacity: 1,
         transform: "translateX(0%)",
         from: {transform: "translateX(100%)", opacity: 0 },
-        delay: 250
+        delay: 200
     })
     return (
         <div className="home">

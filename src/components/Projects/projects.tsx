@@ -6,7 +6,6 @@ import { projectsData } from '../../data/data'
 
 const Projects = () => {
     const masterProp = useSpring({
-        config: {duration: 525},
         opacity: 1,
         transform: "translateY(0%)",
         from: { opacity: 0, transform: "translateY(100%)" },
