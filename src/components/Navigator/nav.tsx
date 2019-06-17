@@ -13,13 +13,13 @@ interface Props extends RouteComponentProps {
 
 const Nav = (props: Props) => {
 
-    let sprProps = useSpring({
+    const sprProps = useSpring({
         opacity: 1,
         reverse: !props.clicked && window.innerWidth < 1000,
         transform: "translateX(0%)",
-        from: { opacity: 0, transform: "translateX(-100%)"}
+        from: { opacity: 0, transform: "translateX(-100%)" }
     })
-
+    const { x } = useSpring({x: props.route === "contact" ? 1 : 0, config: { duration: 1000 }, from: { x: 0} })
     return (
         <div className={`master-nav ${props.clicked ? "appear" : ""}`}>
             <animated.div className={`animated-nav ${props.route}-nav`} style={sprProps}>
@@ -48,17 +48,37 @@ const Nav = (props: Props) => {
                     </div>
                     <div className="links">
                         <div className={`sublinks ${props.route === "contact" ? "glow" : ""}`}>
-                            <a
+                            <animated.a
                                 href="https://github.com/MarcDwyer?tab=repositories"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="fa fa-github"
+                                style={{
+                                     //@ts-ignore
+                                    opacity: x.interpolate({ output: [0.8, 1] }),
+                                    transform: x
+                                        .interpolate({
+                                            range: [0, 0.25, 0.35, 0.45, 0.55, 0.65, 0.75, 1],
+                                            output: [1, 0.97, 0.9, 1.1, 0.9, 1.1, 1.03, 1]
+                                        })
+                                        .interpolate(x => `scale(${x})`)
+                                }}
                             />
-                            <a
+                            <animated.a
                                 href="https://www.linkedin.com/in/marc-dwyer-53087339/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="fa fa-linkedin"
+                                style={{
+                                    //@ts-ignore
+                                    opacity: x.interpolate({ output: [0.7, 1] }),
+                                    transform: x
+                                        .interpolate({
+                                            range: [0, 0.25, 0.35, 0.45, 0.55, 0.65, 0.75, 1],
+                                            output: [1, 0.97, 0.9, 1.1, 0.9, 1.1, 1.03, 1]
+                                        })
+                                        .interpolate(x => `scale(${x})`)
+                                }}
                             />
                         </div>
                     </div>

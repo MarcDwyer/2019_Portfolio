@@ -2,13 +2,29 @@ import React from 'react'
 import './projects.scss'
 import { animated, useSpring } from 'react-spring'
 import { Tweet } from 'react-twitter-widgets'
-import { projectsData } from '../../data/data'
+import { projectsData, ProjectsType } from '../../data/data'
+
+
+const getImageJsx = (proj: ProjectsType): JSX.Element | null => {
+    let result = <img src={proj.url} alt="application" />
+    switch (proj.id) {
+        case 2:
+            result = <div className="tweeter">
+                <Tweet tweetId={"1138879923362455553"} />
+            </div>
+            break
+        case 4:
+            result = null
+    }
+    return result
+}
 
 const Projects = () => {
     const masterProp = useSpring({
         transform: "translateX(0%)",
-        from: {transform: "translateX(-100%)" }
+        from: { transform: "translateX(-100%)" }
     })
+
     return (
         <div className="master-projects" style={masterProp}>
             <animated.div className="sub-project" style={masterProp}>
@@ -40,13 +56,7 @@ const Projects = () => {
                                     <span>Stack: {item.stack}</span>
                                     <p>{item.details}</p>
                                 </div>
-                                {item.title.startsWith("GraphQL") ? (
-                                    <div className="tweeter">
-                                        <Tweet tweetId={"1138879923362455553"} />
-                                    </div>
-                                ) : (
-                                        <img src={item.url} alt="application" />
-                                    )}
+                                {getImageJsx(item)}
                             </div>
                         </div>
                     )
