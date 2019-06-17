@@ -6,10 +6,8 @@ import { projectsData } from '../../data/data'
 
 const Projects = () => {
     const masterProp = useSpring({
-        config: {duration: 250},
-        transform: "translateY(0%)",
-        from: {transform: "translateY(-100%)" },
-        delay: 200
+        transform: "translateX(0%)",
+        from: {transform: "translateX(-100%)" }
     })
     return (
         <div className="master-projects" style={masterProp}>
