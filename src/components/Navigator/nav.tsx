@@ -20,7 +20,6 @@ const Nav = (props: Props) => {
         from: { opacity: 0, transform: "translateX(-100%)" }
     })
     const { x, fontSize } = useSpring({ x: props.route === "contact" ? 1 : 0, fontSize: props.route === "contact" ? 44 : 36, config: { duration: 1000 }, from: { x: 0, fontSize: 36 } })
-    console.log({ x, fontSize })
     return (
         <div className={`master-nav ${props.clicked ? "appear" : ""}`}>
             <animated.div className={`animated-nav ${props.route}-nav`} style={sprProps}>
