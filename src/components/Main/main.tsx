@@ -25,16 +25,11 @@ const checkRoute = (path: string): string | null => {
     }
 }
 const getMenuColor = (clicked: boolean, route: string): string => {
-    let str = "white";
-    if (clicked) return str
-    switch (route) {
-        case "projects":
-            str = "black"
-        case "work":
-            str = "black"
-        default:
-            return str
+    let str = "black";
+    if (clicked) {
+        str = "white"
     }
+    return str
 }
 const Main = (props: RouteComponentProps) => {
     const location = props.location.pathname
