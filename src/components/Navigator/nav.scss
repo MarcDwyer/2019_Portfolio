@@ -57,7 +57,7 @@
 
         a {
             text-decoration: none;
-            color: inherit
+            color: inherit;
 
         }
     }
@@ -88,4 +88,8 @@
     position: absolute;
     left: 0;
     width: 100%;
+}
+
+.linker:hover {
+    color: rgba(255, 255, 255, 1) !important;
 }

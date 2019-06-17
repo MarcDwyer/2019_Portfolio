@@ -19,7 +19,8 @@ const Nav = (props: Props) => {
         transform: "translateX(0%)",
         from: { opacity: 0, transform: "translateX(-100%)" }
     })
-    const { x } = useSpring({x: props.route === "contact" ? 1 : 0, config: { duration: 1000 }, from: { x: 0} })
+    const { x, fontSize } = useSpring({ x: props.route === "contact" ? 1 : 0, fontSize: props.route === "contact" ? 44 : 36, config: { duration: 1000 }, from: { x: 0, fontSize: 36 } })
+    console.log({ x, fontSize })
     return (
         <div className={`master-nav ${props.clicked ? "appear" : ""}`}>
             <animated.div className={`animated-nav ${props.route}-nav`} style={sprProps}>
@@ -54,14 +55,18 @@ const Nav = (props: Props) => {
                                 rel="noopener noreferrer"
                                 className="fa fa-github"
                                 style={{
-                                     //@ts-ignore
+                                    //@ts-ignore
                                     opacity: x.interpolate({ output: [0.8, 1] }),
                                     transform: x
                                         .interpolate({
                                             range: [0, 0.25, 0.35, 0.45, 0.55, 0.65, 0.75, 1],
                                             output: [1, 0.97, 0.9, 1.1, 0.9, 1.1, 1.03, 1]
                                         })
-                                        .interpolate(x => `scale(${x})`)
+                                        .interpolate(x => `scale(${x})`),
+                                    fontSize: fontSize.interpolate({
+                                        range: [33, 35, 37, 40, 44],
+                                        output: [33, 36, 40, 44, 54]
+                                    })
                                 }}
                             />
                             <animated.a
@@ -77,7 +82,11 @@ const Nav = (props: Props) => {
                                             range: [0, 0.25, 0.35, 0.45, 0.55, 0.65, 0.75, 1],
                                             output: [1, 0.97, 0.9, 1.1, 0.9, 1.1, 1.03, 1]
                                         })
-                                        .interpolate(x => `scale(${x})`)
+                                        .interpolate(x => `scale(${x})`),
+                                    fontSize: fontSize.interpolate({
+                                        range: [33, 35, 37, 40],
+                                        output: [33, 36, 40, 44]
+                                    })
                                 }}
                             />
                         </div>
