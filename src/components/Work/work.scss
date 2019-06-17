@@ -1,5 +1,7 @@
 .work {
     color: rgb(103, 103, 103);
+    overflow-y: auto;
+    overflow-x: hidden;
 
     .card-flex {
         display: flex;

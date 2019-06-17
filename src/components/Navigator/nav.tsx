@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React from 'react'
 import { withRouter, Link } from 'react-router-dom'
 import { RouteComponentProps } from 'react-router'
 import './nav.scss'
@@ -13,17 +13,16 @@ interface Props extends RouteComponentProps {
 
 const Nav = (props: Props) => {
 
-    let navDiv = useRef<HTMLDivElement | null>(null)
-    const sprProps = useSpring({
+    let sprProps = useSpring({
         opacity: 1,
+        reverse: !props.clicked && window.innerWidth < 1000,
         transform: "translateX(0%)",
-        from: { opacity: 0, transform: "translateX(-100%)"},
-        delay: 200
+        from: { opacity: 0, transform: "translateX(-100%)"}
     })
 
     return (
-        <animated.div className={`master-nav ${props.clicked ? "appear" : ""}`} style={sprProps} ref={navDiv}>
-            <div className={`animated-nav ${props.route}-nav`}>
+        <div className={`master-nav ${props.clicked ? "appear" : ""}`}>
+            <animated.div className={`animated-nav ${props.route}-nav`} style={sprProps}>
                 <div className="subDiv">
                     <img src="https://s3.us-east-2.amazonaws.com/fetchappbucket/port/me.jpg" alt="me" />
                     <div className="inner-text">
@@ -64,8 +63,8 @@ const Nav = (props: Props) => {
                         </div>
                     </div>
                 </div>
-            </div>
-        </animated.div>
+            </animated.div>
+        </div>
     )
 }
 

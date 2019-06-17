@@ -6,13 +6,14 @@
 }
 
 .fa-bars {
-    font-size: 28px;
+    font-size: 33px;
     position: absolute;
     top: 10px;
     display: none;
     left: 10px;
     color: #eee;
-    z-index: 1000;
+    z-index: 1002;
+    cursor: pointer;
 
     @media (max-width: 1000px) {
         display: flex;
