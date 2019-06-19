@@ -17,7 +17,7 @@ const Nav = (props: Props) => {
         opacity: 1,
         reverse: !props.clicked && window.innerWidth < 1000,
         transform: "translateX(0%)",
-        from: { opacity: 0, transform: "translateX(-100%)" }
+        from: { opacity:  !props.route ? 1 : 0, transform: !props.route ? "translateX(0%)" : "translateX(-100%)" }
     })
     const { x, fontSize } = useSpring({ x: props.route === "contact" ? 1 : 0, fontSize: props.route === "contact" ? 44 : 36, config: { duration: 1000 }, from: { x: 0, fontSize: 36 } })
     return (

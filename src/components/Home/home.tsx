@@ -10,9 +10,7 @@ const Home = (props: RouteComponentProps) => {
 
     const iProps = useSpring({
         opacity: 1,
-        transform: "translateX(0%)",
-        from: { transform: "translateX(100%)", opacity: 0 },
-        delay: 200
+        from: {opacity: 0 }
     })
     return (
         <div className="home">
