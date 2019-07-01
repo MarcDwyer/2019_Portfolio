@@ -7,7 +7,7 @@
     "@types/node": "12.0.7",
     "@types/react": "16.8.19",
     "@types/react-dom": "16.8.4",
-    "@types/react-router-dom": "^4.3.3",
+    "@types/react-router-dom": "^4.3.4",
     "node-sass": "^4.12.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -15,7 +15,7 @@
     "react-particles-js": "^2.6.0",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
-    "react-spring": "^8.0.23",
+    "react-spring": "^8.0.27",
     "react-twitter-widgets": "^1.7.1",
     "typescript": "3.5.1"
   },

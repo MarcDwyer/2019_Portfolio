@@ -21,11 +21,8 @@ const getImageJsx = (proj: ProjectsType): JSX.Element | null => {
 
 const Projects = () => {
     const masterProp = useSpring({
-        config: {duration: 275},
-        transform: "translateX(0%)",
         opacity: 1,
-        from: { transform: "translateX(-100%)", opacity: 0 },
-        delay: 100
+        from: { opacity: 0 }
     })
     return (
         <div className="master-projects" style={masterProp}>

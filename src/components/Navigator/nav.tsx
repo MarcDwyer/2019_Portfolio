@@ -12,22 +12,25 @@ interface Props extends RouteComponentProps {
 }
 
 const Nav = (props: Props) => {
+    const isMobile = window.innerWidth < 1000;
 
     const sprProps = useSpring({
         opacity: 1,
-        reverse: !props.clicked && window.innerWidth < 1000,
+        reverse: !props.clicked && isMobile,
         transform: "translateX(0%)",
-        from: { opacity:  !props.route ? 1 : 0, transform: !props.route ? "translateX(0%)" : "translateX(-100%)" }
+        from: { opacity: !props.route ? 1 : 0, transform: !props.route ? "translateX(0%)" : "translateX(-100%)" }
     })
-    const { x, fontSize } = useSpring({ x: props.route === "contact" ? 1 : 0, fontSize: props.route === "contact" ? 44 : 36, config: { duration: 1000 }, from: { x: 0, fontSize: 36 } })
+    const { x, fontSize } = useSpring({ x: props.route === "contact" && !isMobile ? 1 : 0, fontSize: props.route === "contact" && !isMobile ? 50 : 42, config: { duration: 1000 }, from: { x: 0, fontSize: 42 } })
     return (
         <div className={`master-nav ${props.clicked ? "appear" : ""}`}>
             <animated.div className={`animated-nav ${props.route}-nav`} style={sprProps}>
                 <div className="subDiv">
-                    <img src="https://s3.us-east-2.amazonaws.com/fetchappbucket/port/me.jpg" alt="me" />
-                    <div className="inner-text">
-                        <h1>Marc Dwyer</h1>
-                        <h3>Web Developer</h3>
+                    <div className="inner-con">
+                        <img src="https://s3.us-east-2.amazonaws.com/fetchappbucket/port/me.jpg" alt="me" />
+                        <div className="inner-text">
+                            <h1>Marc Dwyer</h1>
+                            <h3>Web Developer</h3>
+                        </div>
                     </div>
                     <div className="app-links">
                         {Links.map((item: string) => {

@@ -10,7 +10,13 @@ const Home = (props: RouteComponentProps) => {
 
     const iProps = useSpring({
         opacity: 1,
-        from: {opacity: 0 }
+        transform: "translateX(0)",
+        from: { opacity: 0, transform: "translateX(150%)" }
+    })
+
+    const LinkDiv = useSpring({
+        transform: "rotate(0)",
+        from: { transform: "rotate(65deg)" }
     })
     return (
         <div className="home">
@@ -19,7 +25,10 @@ const Home = (props: RouteComponentProps) => {
                 params={Params}
             />
             <animated.div className="welcome" style={iProps}>
-                <span>Welcome to my portfolio!</span>
+                <div className="home-header">
+                    <span className="first-header">MARC DWYER</span>
+                    <span>Full-Stack Developer</span>
+                </div>
                 <Link
                     className="home-projects"
                     to="/projects"
@@ -27,7 +36,7 @@ const Home = (props: RouteComponentProps) => {
                     View Projects
                 </Link>
             </animated.div>
-            <animated.i className="fa fa-arrow-left" style={iProps} />
+            <animated.i className="fa fa-arrow-left" style={LinkDiv} />
         </div>
     )
 }

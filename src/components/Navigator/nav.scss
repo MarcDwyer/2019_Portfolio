@@ -7,58 +7,75 @@
     flex: 0 0 350px;
     z-index: 1001;
 
-    .links {
-        display: flex;
-        position: absolute;
-        bottom: 25px;
-        left: 0;
-        right: 0;
-
-        .sublinks {
-            margin: auto;
-
-            a {
-                font-size: 42px;
-                padding: 0 15px 0 15px;
-            }
-        }
-    }
-
     .animated-nav {
         background-color: #031b4d;
         transition: background-color 1.5s ease-in;
         height: 100%;
-        margin: auto;
         display: flex;
         width: 100%;
 
         .subDiv {
+            display: flex;
+            flex-direction: column;
             margin: auto;
-        }
+            width: 100%;
+            height: 100%;
 
-        img {
-            width: 250px;
-            height: 250px;
-            border-radius: 50%;
-        }
+            .inner-con {
+                display: flex;
+                flex-direction: column;
+                margin-top: auto;
 
-        .inner-text {
-            text-align: center;
+                img {
+                    margin: auto;
+                    width: 250px;
+                    height: 250px;
+                    border-radius: 50%;
+                }
 
-            h1 {
-                margin-bottom: 5px;
+                .inner-text {
+                    text-align: center;
+
+                    h1 {
+                        margin-bottom: 5px;
+                    }
+
+                    h2 {
+                        margin-top: 0;
+                    }
+                }
+
+
+                a {
+                    text-decoration: none;
+                    color: inherit;
+
+                }
             }
 
-            h2 {
-                margin-top: 0;
+            .links {
+                display: flex;
+                height: 15%;
+                margin-top: auto;
+
+                .sublinks {
+                    margin: auto auto 25px auto;
+                    padding-top: 15px;
+                    display: flex;
+
+
+                    a:first-child{
+                        margin-right: 35px;
+                    }
+                    a {
+                        margin: auto;
+
+                        &:hover {
+                            color: rgba(255, 255, 255, 1);
+                        }
+                    }
+                }
             }
-        }
-
-
-        a {
-            text-decoration: none;
-            color: inherit;
-
         }
     }
 
