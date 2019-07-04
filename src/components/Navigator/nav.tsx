@@ -31,23 +31,23 @@ const Nav = (props: Props) => {
                             <h1>Marc Dwyer</h1>
                             <h3>Web Developer</h3>
                         </div>
-                    </div>
-                    <div className="app-links">
-                        {Links.map((item: string) => {
-                            const lowerStr = item.toLowerCase()
-                            const path = lowerStr === "home" ? "/" : lowerStr
-                            return (
-                                <Link
-                                    style={props.route === lowerStr || (lowerStr === "home" && !props.route) ? { color: "rgba(255,255,255,1)" } : {}}
-                                    key={item}
-                                    to={path}
-                                    onClick={() => props.setClicked(false)}
-                                    className="linker"
-                                >
-                                    {item}
-                                </Link>
-                            )
-                        })}
+                        <div className="app-links">
+                            {Links.map((item: string) => {
+                                const lowerStr = item.toLowerCase()
+                                const path = lowerStr === "home" ? "/" : lowerStr
+                                return (
+                                    <Link
+                                        style={props.route === lowerStr || (lowerStr === "home" && !props.route) ? { color: "rgba(255,255,255,1)" } : {}}
+                                        key={item}
+                                        to={path}
+                                        onClick={() => props.setClicked(false)}
+                                        className="linker"
+                                    >
+                                        {item}
+                                    </Link>
+                                )
+                            })}
+                        </div>
                     </div>
                     <div className="links">
                         <div className={`sublinks ${props.route === "contact" ? "glow" : ""}`}>
