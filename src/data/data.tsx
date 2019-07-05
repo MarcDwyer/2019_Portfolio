@@ -72,25 +72,30 @@ export const projectsData: ProjectsType[] = [
 interface WorkExperience {
     companyName: string;
     duration: number;
-    descriptionRole: string;
+    descriptionRole: string[];
     currentJob?: boolean;
 }
 export const WorkExp: WorkExperience[] = [
     {
+        companyName: "Freelance Developer",
+        duration: 2,
+        descriptionRole: ["Consult with local businesses", "Volunteer work with non-profit organizations", "Deploy multiple Web Apps using modern technologies", "Create fast, fluid, and interactive web applications"]
+    },
+    {
         companyName: "Best Buy Co",
         duration: 1.5,
-        descriptionRole: "Primarily a customer-service role. Assisted with customers in finding/troubleshooting electronic devices.",
+        descriptionRole: ["Work with customers finding appropriate product", "Help troubleshoot client's electronic issues"],
     },
     {
         companyName: "Whole Foods Co",
         duration: 2,
-        descriptionRole: "Customer-service role. Work as a cashier as well as cleaning the dining room",
+        descriptionRole: ["Assist customers in-person as well as over the phone", "Occasionally work as a team lead", "Assist other departments in their duties"],
         currentJob: true
     },
     {
         companyName: "Publix Grocery Store",
         duration: 1,
-        descriptionRole: "Worked primarily in the produce section. Organized the cooling room, checked produce expiration dates, and assuring the Produce section stays visually appealing.",
+        descriptionRole: ["Primarily a stocking role", "Assist customers in finding appropriate products", "Manage and organize products based on expiration dates"],
     }
 ]
 

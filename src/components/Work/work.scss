@@ -5,30 +5,45 @@
 
     .card-flex {
         display: flex;
-        margin: auto;
         flex-wrap: wrap;
+        margin: auto;
 
         .work-card {
             border-radius: 0;
-            width: 25%;
-            overflow-y: auto;
             text-align: center;
-            height: 220px;
+            display: flex;
+            flex-wrap: wrap;
+            width: 25%;
+            margin-bottom: 25px;
+            height: 250px;
 
-            h2 {
-                padding: 10px 10px;
-                border-radius: 2px;
-                border-bottom: 2px solid #66B2B2;
-            }
 
-            .inner-content {
+            .actual-content {
                 margin: auto;
-                display: flex;
-                width: 90%;
-                flex-direction: column;
+                width: 100%;
 
-                span {
-                    font-weight: 600;
+
+                h2 {
+                    padding: 10px 10px;
+                    border-radius: 2px;
+                    border-bottom: 2px solid #66B2B2;
+                }
+
+                .inner-content {
+                    margin: auto;
+                    display: flex;
+                    width: 90%;
+                    flex-direction: column;
+
+                    span {
+                        font-weight: 600;
+
+                    }
+                }
+
+                li {
+                    font-size: 14px;
+                    text-align: start;
                 }
             }
 
@@ -38,13 +53,17 @@
                     margin: 15px auto 15px auto;
                 }
             }
-            
+
             @media (max-width: 850px) {
                 & {
                     width: 75%;
                     margin: 15px auto 15px auto;
                 }
             }
+        }
+
+        @media (max-width: 2150px) {
+            grid-template-columns: repeat(3, 1fr);
         }
     }
 }

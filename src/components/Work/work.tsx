@@ -16,19 +16,25 @@ const Work = () => {
                 {WorkExp.map(job => {
                     return (
                         <div className="card work-card" style={cardProps} key={job.companyName}>
-                            <h2>{job.companyName}</h2>
-                            <div className="inner-content">
-                                {job.currentJob ? (
-                                    <div className="present">
-                                        <i className="fa fa-check" style={{ color: "#7FBF7F" }} />
-                                        <span> Present Job</span>
-                                    </div>
-                                ) : (
-                                        <span>Worked for: {job.duration} {job.duration <= 1 ? "year" : "years"}</span>
-                                    )}
-                                <p>
-                                    {job.descriptionRole}
-                                </p>
+                            <div className="actual-content">
+                                <h2>{job.companyName}</h2>
+                                <div className="inner-content">
+                                    {job.currentJob ? (
+                                        <div className="present">
+                                            <i className="fa fa-check" style={{ color: "#7FBF7F" }} />
+                                            <span> Present Job</span>
+                                        </div>
+                                    ) : (
+                                            <span>Worked for: {job.duration} {job.duration <= 1 ? "year" : "years"}</span>
+                                        )}
+                                    <ul>
+                                        {job.descriptionRole.map(i => (
+                                            <li>
+                                                {i}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     )
