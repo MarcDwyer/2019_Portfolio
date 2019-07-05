@@ -1,5 +1,5 @@
 .work {
-    color: rgb(103, 103, 103);
+    color: rgba(103, 103, 103, 1);
     overflow-y: auto;
     overflow-x: hidden;
 
@@ -7,13 +7,14 @@
         display: flex;
         flex-wrap: wrap;
         margin: auto;
+        width: 100%;
 
         .work-card {
             border-radius: 0;
             text-align: center;
             display: flex;
             flex-wrap: wrap;
-            width: 25%;
+            width: 20%;
             margin-bottom: 25px;
             height: 250px;
 
@@ -42,7 +43,9 @@
                 }
 
                 li {
+                    color: rgba(103, 103, 103, .85);
                     font-size: 14px;
+                    font-weight: 550;
                     text-align: start;
                 }
             }
