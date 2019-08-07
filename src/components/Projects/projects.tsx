@@ -34,7 +34,9 @@ const Projects = () => {
                             <div className={`proj ${int % 2 !== 0 ? "odd" : "even"}`}>
                                 <div className="body">
                                     <h2 className="title">{item.title}
-                                        <small> -- hosted on {item.hosted}</small>
+                                        {item.hosted && (
+                                            <small> -- hosted on {item.hosted}</small>
+                                        )}
                                     </h2>
                                     <div className="live-demo">
                                         {item.links.map(i => {
