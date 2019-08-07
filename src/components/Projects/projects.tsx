@@ -8,12 +8,12 @@ import { projectsData, ProjectsType } from '../../data/data'
 const getImageJsx = (proj: ProjectsType): JSX.Element | null => {
     let result = <img src={proj.url} alt="application" />
     switch (proj.id) {
-        case 2:
+        case 3:
             result = <div className="tweeter">
                 <Tweet tweetId={"1138879923362455553"} />
             </div>
             break
-        case 4:
+        case 5:
             result = null
     }
     return result
