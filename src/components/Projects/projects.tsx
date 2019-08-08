@@ -44,7 +44,7 @@ const Projects = () => {
                                             return (
                                                 <a
                                                     href={i.link}
-                                                    target="_blank"
+                                                    target={i.download ? "" : "_blank"}
                                                     rel="noopener noreferrer"
                                                     key={i.link}
                                                     className={isLive ? "live-button" : ""}

@@ -11,6 +11,7 @@ export interface ProjectsType {
 interface Links {
     title: string;
     link: string;
+    download?: boolean;
 }
 
 export const projectsData: ProjectsType[] = [
@@ -19,7 +20,7 @@ export const projectsData: ProjectsType[] = [
         title: 'Hue Controller',
         details: "Hue Controller, built using the Electron Framework, allows the client to modify lights connected to their Philips Hue Bridge. It accomplishes this by sending http requests with the modified data to the bridge's own API. The app allows the client to modify the selected lights color values, brightness, power status and much more.",
         url: 'https://fetchappbucket.s3.us-east-2.amazonaws.com/port/hue1.png',
-        links: [{ title: "Full-Stack Repo", link: "https://github.com/MarcDwyer/electron-hue-controller" }],
+        links: [{ title: "Full-Stack Repo", link: "https://github.com/MarcDwyer/electron-hue-controller" }, {title: "Download for Windows", link: "https://github.com/MarcDwyer/electron-hue-controller/releases/download/1.0/Hue.Controller.Setup.0.1.0.exe", download: true}],
         stack: "React"
     },
     {
