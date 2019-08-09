@@ -40,7 +40,7 @@ const Projects = () => {
                                     </h2>
                                     <div className="live-demo">
                                         {item.links.map(i => {
-                                            const isLive = i.title.startsWith("Live")
+                                            const isLive = i.title.startsWith("Live") || i.title.startsWith("View")
                                             return (
                                                 <a
                                                     href={i.link}
