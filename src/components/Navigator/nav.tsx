@@ -51,46 +51,48 @@ const Nav = (props: Props) => {
                     </div>
                     <div className="links">
                         <div className={`sublinks ${props.route === "contact" ? "glow" : ""}`}>
-                            <animated.a
-                                href="https://github.com/MarcDwyer?tab=repositories"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="fa fa-github"
-                                style={{
-                                    //@ts-ignore
-                                    opacity: x.interpolate({ output: [0.8, 1] }),
-                                    transform: x
-                                        .interpolate({
-                                            range: [0, 0.25, 0.35, 0.45, 0.55, 0.65, 0.75, 1],
-                                            output: [1, 0.97, 0.9, 1.1, 0.9, 1.1, 1.03, 1]
+                            <div className="center-this">
+                                <animated.a
+                                    href="https://github.com/MarcDwyer?tab=repositories"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="fa fa-github"
+                                    style={{
+                                        //@ts-ignore
+                                        opacity: x.interpolate({ output: [0.8, 1] }),
+                                        transform: x
+                                            .interpolate({
+                                                range: [0, 0.25, 0.35, 0.45, 0.55, 0.65, 0.75, 1],
+                                                output: [1, 0.97, 0.9, 1.1, 0.9, 1.1, 1.03, 1]
+                                            })
+                                            .interpolate(x => `scale(${x})`),
+                                        fontSize: fontSize.interpolate({
+                                            range: [33, 35, 37, 40, 44],
+                                            output: [33, 36, 40, 44, 54]
                                         })
-                                        .interpolate(x => `scale(${x})`),
-                                    fontSize: fontSize.interpolate({
-                                        range: [33, 35, 37, 40, 44],
-                                        output: [33, 36, 40, 44, 54]
-                                    })
-                                }}
-                            />
-                            <animated.a
-                                href="https://www.linkedin.com/in/marc-dwyer-53087339/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="fa fa-linkedin"
-                                style={{
-                                    //@ts-ignore
-                                    opacity: x.interpolate({ output: [0.7, 1] }),
-                                    transform: x
-                                        .interpolate({
-                                            range: [0, 0.25, 0.35, 0.45, 0.55, 0.65, 0.75, 1],
-                                            output: [1, 0.97, 0.9, 1.1, 0.9, 1.1, 1.03, 1]
+                                    }}
+                                />
+                                <animated.a
+                                    href="https://www.linkedin.com/in/marc-dwyer-53087339/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="fa fa-linkedin"
+                                    style={{
+                                        //@ts-ignore
+                                        opacity: x.interpolate({ output: [0.7, 1] }),
+                                        transform: x
+                                            .interpolate({
+                                                range: [0, 0.25, 0.35, 0.45, 0.55, 0.65, 0.75, 1],
+                                                output: [1, 0.97, 0.9, 1.1, 0.9, 1.1, 1.03, 1]
+                                            })
+                                            .interpolate(x => `scale(${x})`),
+                                        fontSize: fontSize.interpolate({
+                                            range: [33, 35, 37, 40],
+                                            output: [33, 36, 40, 44]
                                         })
-                                        .interpolate(x => `scale(${x})`),
-                                    fontSize: fontSize.interpolate({
-                                        range: [33, 35, 37, 40],
-                                        output: [33, 36, 40, 44]
-                                    })
-                                }}
-                            />
+                                    }}
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>
