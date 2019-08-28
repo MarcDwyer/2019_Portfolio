@@ -17,11 +17,11 @@ interface Links {
 export const projectsData: ProjectsType[] = [
     {
         id: 0,
-        title: 'Hue Controller',
+        title: 'Hue Desktop Controller',
         details: "Hue Controller, built using the Electron Framework, allows the client to modify lights connected to their Philips Hue Bridge. It accomplishes this by sending http requests with the modified data to the bridge's own API. The app allows the client to modify the selected lights color values, brightness, power status and much more.",
         url: 'https://fetchappbucket.s3.us-east-2.amazonaws.com/port/hue1.png',
         links: [{ title: "Full-Stack Repo", link: "https://github.com/MarcDwyer/electron-hue-controller" }, {title: "View Website", link: "https://hue-controller.netlify.com/"}],
-        stack: "React"
+        stack: "React and Electron"
     },
     {
         id: 1,
