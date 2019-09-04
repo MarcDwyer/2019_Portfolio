@@ -34,11 +34,11 @@ export const projectsData: ProjectsType[] = [
     },
     {
         id: 2,
-        title: "Fetcherapp.net v2",
-        details: "This application pulls steamer's status from both the Twitch API as well as the Youtube API. Both APIs have different data structures and the biggest difficulty was merging both data types into one type and serving it to the client. The backend uses Go and makes use of Go's channels, polymorphism and GoRoutines making the application incredibly fast. The Front-end makes use of React, and keeps the client updated using WebSockets and only updates the client when the server has updated the object of streamers. The frontend is equipped with its own notification system, streamer statistics and images of the stream. This application is extremely convenient when tracking streamers from two different platforms",
+        title: "Twitch-Discovery",
+        details: "Twitch Discovery! The purpose of this experimental project is to grant more exposure to streams that have a lower viewership. From my experience, there is an average total of 40,000 livestreams on Twitch at any given time. However, only the top 50 have above 1,000 viewers. The large majority have around 1 - 50 viewers. Twitch, at the current moment sort the streamers by viewership, so it is quite difficult to find content creators with lower viewership. The backend (NodeJS) randomly pulls an array of streamers every 2 hours and then updates the current list of streamers every 6 minutes (to check if they are still live). The frontend (React) allows the client to view the streamers status, viewership and stream details. Oh, and it also lets you interact with the streamer using the embedded twitch chat! The app is still experimental and gets updates on daily basis",
         url: "https://fetchappbucket.s3.us-east-2.amazonaws.com/port/twitchu.jpg",
-        links: [{ title: "Live Demo", link: "https://www.fetcherapp.net/" }, { title: "Full-Stack Repo", link: "https://github.com/MarcDwyer/theNetwork-react-hooks-typescript" }],
-        stack: "React and Go",
+        links: [{ title: "Live Demo", link: "https://discover.gopoll.me/" }, { title: "Full-Stack Repo", link: "https://github.com/MarcDwyer/twitch-discovery" }],
+        stack: "React and NodeJS",
         hosted: "DigitalOcean"
     },
     {
@@ -51,15 +51,6 @@ export const projectsData: ProjectsType[] = [
         hosted: "Heroku"
     },
     {
-        id: 4,
-        title: "Do Not Press!",
-        details: "The goal of this project was to put smiles on people's faces. A fun troll application. Enjoy!",
-        url: "https://fetchappbucket.s3.us-east-2.amazonaws.com/port/rick.jpg",
-        links: [{ title: "Live Demo", link: "https://donotpress.herokuapp.com/" }, { title: "Full-Stack Repo", link: "https://github.com/MarcDwyer/rickastley" }],
-        stack: "Html, CSS and JavaScript",
-        hosted: "Heroku"
-    },
-    {
         id: 5,
         title: "This Portfolio!",
         details: "The goal of this portfolio was to make a clean and fluid UI using physics based animations with React Spring. Everybody likes animations!",
@@ -67,15 +58,6 @@ export const projectsData: ProjectsType[] = [
         links: [{ title: "Full-Stack Repo", link: "https://github.com/MarcDwyer/2019_Portfolio" }],
         stack: "React",
         hosted: "Netlify"
-    },
-    {
-        id: 6,
-        title: "Live Chat",
-        details: "SocketIO is an incredibly powerful tool. Allowing multiple users to connect with eachother. I created this app because I feel like its important for a Developer to be able to create software that allow users to communicate.",
-        url: "https://s3.us-east-2.amazonaws.com/fetchappbucket/port/livechat.jpg",
-        links: [{ title: "Live Demo", link: "https://livechattesting.herokuapp.com/" }, { title: "Full-Stack Repo", link: "https://github.com/MarcDwyer/Live-Chat" }],
-        stack: "HTML, CSS, JavaScript, NodeJS and SocketIO",
-        hosted: "Heroku"
     }
 ]
 interface WorkExperience {
