@@ -4,22 +4,6 @@ import { animated, useSpring } from "react-spring";
 import { Tweet } from "react-twitter-widgets";
 import { projectsData, ProjectsType } from "../../data/data";
 
-const getImageJsx = (proj: ProjectsType): JSX.Element | null => {
-  let result = <img src={proj.url} alt="application" />;
-  switch (proj.id) {
-    case 4:
-      result = (
-        <div className="tweeter">
-          <Tweet tweetId={"1138879923362455553"} />
-        </div>
-      );
-      break;
-    case 5:
-      result = null;
-  }
-  return result;
-};
-
 const Projects = () => {
   const masterProp = useSpring({
     opacity: 1,
@@ -33,7 +17,7 @@ const Projects = () => {
           return (
             <div
               className={`project ${int % 2 !== 0 ? "odd-par" : "even-par"}`}
-              key={item.url}
+              key={i}
             >
               <div className={`proj ${int % 2 !== 0 ? "odd" : "even"}`}>
                 <div className="body">

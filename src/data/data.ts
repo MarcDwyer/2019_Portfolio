@@ -125,15 +125,8 @@ export const WorkExp: WorkExperience[] = [
       "Volunteer work with non-profit organizations",
       "Deploy multiple Web Apps using modern technologies",
       "Create fast, fluid, and interactive web applications"
-    ]
-  },
-  {
-    companyName: "Best Buy Co",
-    duration: 1.5,
-    descriptionRole: [
-      "Work with customers finding appropriate product",
-      "Help troubleshoot client's electronic issues"
-    ]
+    ],
+    currentJob: true
   },
   {
     companyName: "Whole Foods Co",
@@ -144,15 +137,6 @@ export const WorkExp: WorkExperience[] = [
       "Assist other departments in their duties"
     ],
     currentJob: true
-  },
-  {
-    companyName: "Publix Grocery Store",
-    duration: 1,
-    descriptionRole: [
-      "Primarily a stocking role",
-      "Assist customers in finding appropriate products",
-      "Manage and organize products based on expiration dates"
-    ]
   }
 ];
 
