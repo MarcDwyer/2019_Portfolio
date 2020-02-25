@@ -23,4 +23,8 @@ a {
   height: 100%;
   display: flex;
   overflow-y: auto;
+
+  @media (max-width: 850px) {
+    margin-top: 55px;
+  }
 }

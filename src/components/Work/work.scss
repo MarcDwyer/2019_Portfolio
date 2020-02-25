@@ -11,6 +11,10 @@
     grid-gap: 10px;
     align-content: start;
 
+    @media (max-width: 850px) {
+      margin-bottom: 55px;
+    }
+
     .work-card {
       border-radius: 0;
       text-align: center;
