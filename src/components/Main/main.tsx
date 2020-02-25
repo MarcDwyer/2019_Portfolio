@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Nav from "../Navigator/nav";
 import { Route, Switch } from "react-router-dom";
 import { Router } from "react-router";
@@ -9,12 +9,14 @@ import Home from "../Home/home";
 import Contact from "../Contact/contact";
 import Work from "../Work/work";
 
+import { MainContainer } from "../../styled-comps/containers";
+
 import "./main.scss";
 
 export const history = createBrowserHistory();
 const Main = () => {
   return (
-    <div className="master-div">
+    <MainContainer>
       <Router history={history}>
         <Nav />
         <Switch>
@@ -24,7 +26,7 @@ const Main = () => {
           <Route path="/" component={Home} />
         </Switch>
       </Router>
-    </div>
+    </MainContainer>
   );
 };
 

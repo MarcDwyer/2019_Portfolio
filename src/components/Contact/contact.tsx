@@ -1,5 +1,7 @@
 import React from "react";
 import { useSpring, animated } from "react-spring";
+import { Container } from "../../styled-comps/containers";
+import { myColors } from "../../styled-comps/global-styles";
 
 import "./contact.scss";
 
@@ -12,7 +14,7 @@ const Contact = () => {
   });
 
   return (
-    <div className="contact">
+    <Container bgColor={myColors.lightGrey}>
       <animated.div className="sub-contact card" style={subProps}>
         <span>Marc Dwyer</span>
         <div className="contact-info">
@@ -22,7 +24,7 @@ const Contact = () => {
           </div>
         </div>
       </animated.div>
-    </div>
+    </Container>
   );
 };
 

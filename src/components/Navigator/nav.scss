@@ -2,18 +2,17 @@
   display: flex;
   background-color: grey;
   color: rgba(255, 255, 255, 0.8);
-  height: 100%;
   flex: 0 0 350px;
   z-index: 999;
+  height: 100%;
 
   @media (max-width: 850px) {
     position: absolute;
     left: -450px;
-    height: calc(100vh - 55px);
   }
 
   .animated-nav {
-    background-color: #031b4d;
+    background-color: #666666;
     transition: background-color 1.5s ease-in;
     display: flex;
     flex-direction: column;
@@ -22,8 +21,8 @@
 
     .subDiv {
       display: flex;
-      flex-direction: column;
       margin: auto;
+      flex-direction: column;
       width: 100%;
 
       .inner-con {

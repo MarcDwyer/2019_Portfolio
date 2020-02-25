@@ -1,35 +1,33 @@
-.contact {
+.sub-contact {
   color: rgb(103, 103, 103);
   text-align: center;
   margin: auto;
 
-  .sub-contact {
-    span {
-      font-size: 1.8rem;
-      line-height: 2rem;
-      font-weight: 400;
-      max-width: 100%;
-    }
+  span {
+    font-size: 1.8rem;
+    line-height: 2rem;
+    font-weight: 400;
+    max-width: 100%;
+  }
+}
+
+.contact-info {
+  display: flex;
+  margin-top: 35px;
+
+  a {
+    color: inherit;
+  }
+  i {
+    margin-bottom: 15px;
   }
 
-  .contact-info {
+  .email {
     display: flex;
-    margin-top: 35px;
+    flex-direction: column;
 
-    a {
-      color: inherit;
-    }
     i {
-      margin-bottom: 15px;
-    }
-
-    .email {
-      display: flex;
-      flex-direction: column;
-
-      i {
-        font-size: 44px;
-      }
+      font-size: 44px;
     }
   }
 }

@@ -11,15 +11,14 @@ export const HamburgerMenu = styled(FaHamburger)<PHamburger>`
   cursor: pointer;
 `;
 
-export const MobileNavbar = styled.div`
-  position: sticky;
-  position: -webkit-sticky;
+export const MobileNavbar = styled.nav`
+  position: fixed;
   top: 0;
-  display: flex;
+  overflow: hidden;
   z-index: 1000;
   width: 100%;
   height: 55px;
-  background-color: #031b4d;
+  background-color: #666666;
   display: none;
 
   @media (max-width: 850px) {

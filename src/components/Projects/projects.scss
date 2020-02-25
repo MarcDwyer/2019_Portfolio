@@ -4,10 +4,13 @@
   width: 100%;
   color: rgb(103, 103, 103);
 
+  @media (max-width: 850px) {
+    margin-top: 55px;
+  }
+
   .project {
     display: flex;
     width: 100%;
-    border-bottom: 1px solid black;
 
     .proj {
       display: flex;

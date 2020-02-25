@@ -1,8 +1,9 @@
 .master-div {
   background-color: #eee;
-  height: 100vh;
+  height: 100%;
   display: flex;
   width: 100%;
+  border: solid 1px red;
 
   .master {
     background-color: #d6d6d6;

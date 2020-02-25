@@ -1,8 +1,10 @@
 import React from "react";
-import "./projects.scss";
 import { animated, useSpring } from "react-spring";
 import { Tweet } from "react-twitter-widgets";
-import { projectsData, ProjectsType } from "../../data/data";
+import { projectsData } from "../../data/data";
+import { Container } from "../../styled-comps/containers";
+
+import "./projects.scss";
 
 const Projects = () => {
   const masterProp = useSpring({
@@ -10,16 +12,19 @@ const Projects = () => {
     from: { opacity: 0 }
   });
   return (
-    <div className="master projects" style={masterProp}>
+    <Container className="master projects" style={masterProp}>
       <animated.div className="sub-project" style={masterProp}>
         {projectsData.map((item, i) => {
           const int = i + 2;
+          const isEven = int % 2 === 0;
+          console.log(isEven);
           return (
             <div
-              className={`project ${int % 2 !== 0 ? "odd-par" : "even-par"}`}
+              style={{ backgroundColor: `${isEven ? "#bcbcbc" : "#D1D1D1"}` }}
+              className={`project ${isEven ? "odd-par" : "even-par"}`}
               key={i}
             >
-              <div className={`proj ${int % 2 !== 0 ? "odd" : "even"}`}>
+              <div className={`proj ${isEven ? "odd" : "even"}`}>
                 <div className="body">
                   <h2 className="title">
                     {item.title}
@@ -58,7 +63,7 @@ const Projects = () => {
           );
         })}
       </animated.div>
-    </div>
+    </Container>
   );
 };
 

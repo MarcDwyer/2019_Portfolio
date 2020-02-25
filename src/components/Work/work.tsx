@@ -1,6 +1,9 @@
 import React from "react";
 import { WorkExp } from "../../data/data";
 import { useSpring, animated } from "react-spring";
+import { Container } from "../../styled-comps/containers";
+import { myColors } from "../../styled-comps/global-styles";
+
 import "./work.scss";
 
 const Work = () => {
@@ -10,11 +13,11 @@ const Work = () => {
     from: { transform: "translateX(100%)", opacity: 0 }
   });
   return (
-    <div className="master work">
+    <Container bgColor={myColors.lightGrey}>
       <animated.div className="card-flex" style={cardProps}>
         {WorkExp.map((job, i) => {
           return (
-            <div className="card work-card" style={cardProps} key={i}>
+            <div className="card work-card" key={i}>
               <div className="actual-content">
                 <h2>{job.companyName}</h2>
                 <div className="inner-content">
@@ -40,7 +43,7 @@ const Work = () => {
           );
         })}
       </animated.div>
-    </div>
+    </Container>
   );
 };
 
