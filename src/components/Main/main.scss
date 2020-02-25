@@ -1,22 +1,6 @@
 .master-div {
-    background-color: #eee;
-    height: 100vh;
-    display: flex;
-    position: relative;
-}
-
-.fa-bars {
-    font-size: 38px;
-    position: absolute;
-    top: 10px;
-    display: none;
-    left: 10px;
-    padding: 15px 15px;
-    color: #eee;
-    z-index: 1002;
-    cursor: pointer;
-
-    @media (max-width: 1000px) {
-        display: flex;
-    }
+  background-color: #eee;
+  height: 100vh;
+  display: flex;
+  width: 100%;
 }

@@ -10,7 +10,7 @@ const Projects = () => {
     from: { opacity: 0 }
   });
   return (
-    <div className="master-projects" style={masterProp}>
+    <div className="master projects" style={masterProp}>
       <animated.div className="sub-project" style={masterProp}>
         {projectsData.map((item, i) => {
           const int = i + 2;

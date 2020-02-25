@@ -1,6 +1,6 @@
 .master-nav {
   display: flex;
-  background-color: transparent;
+  background-color: grey;
   color: rgba(255, 255, 255, 0.8);
   height: 100%;
   flex: 0 0 350px;
@@ -9,7 +9,6 @@
   @media (max-width: 850px) {
     position: absolute;
     left: -450px;
-    height: calc(100vh - 55px);
   }
 
   .animated-nav {
