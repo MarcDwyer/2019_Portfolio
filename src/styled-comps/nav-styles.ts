@@ -12,7 +12,7 @@ export const HamburgerMenu = styled(FaHamburger)<PHamburger>`
 `;
 
 export const MobileNavbar = styled.div`
-  position: fixed;
+  position: sticky;
   top: 0;
   display: flex;
   z-index: 1000;

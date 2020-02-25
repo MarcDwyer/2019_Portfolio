@@ -9,6 +9,7 @@
   @media (max-width: 850px) {
     position: absolute;
     left: -450px;
+    height: calc(100vh - 55px);
   }
 
   .animated-nav {
