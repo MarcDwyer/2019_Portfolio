@@ -17,6 +17,7 @@
       display: flex;
       flex-wrap: wrap;
       height: 250px;
+      overflow-y: auto;
 
       .actual-content {
         margin: auto;
@@ -63,7 +64,7 @@
     }
 
     @media (max-width: 2150px) {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(1, 1fr);
     }
   }
 }

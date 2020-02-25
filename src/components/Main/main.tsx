@@ -11,23 +11,12 @@ import Work from "../Work/work";
 
 import "./main.scss";
 
-const getMenuColor = (clicked: boolean, route: string): string => {
-  let str = "black";
-  if (clicked) {
-    str = "white";
-  }
-  return str;
-};
-
 export const history = createBrowserHistory();
 const Main = () => {
-  const [clicked, setClicked] = useState<boolean>(false);
-
   return (
     <div className="master-div">
-      <i className="fa fa-bars" onClick={() => setClicked(!clicked)} />
       <Router history={history}>
-        <Nav clicked={clicked} setClicked={setClicked} />
+        <Nav />
         <Switch>
           <Route path="/projects" component={Projects} />
           <Route path="/work" component={Work} />

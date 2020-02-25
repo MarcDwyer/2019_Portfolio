@@ -1,20 +1,16 @@
 body {
   margin: 0;
-  font-family: "proxima-nova", "proxima nova", "helvetica neue", "helvetica", "arial", sans-serif !important;
+  padding: 0;
+  overflow: hidden;
+  font-family: "proxima-nova", "proxima nova", "helvetica neue", "helvetica",
+    "arial", sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
-}
-
-.master-div {
-  overflow: hidden;
-  display: flex;
-  height: 100vh;
-  background-color: #031b4d !important;
 }
 
 a {
@@ -23,7 +19,7 @@ a {
 }
 
 .master {
-  background-color: #D6D6D6;
+  background-color: #d6d6d6;
   width: 100%;
   height: 100%;
   display: flex;

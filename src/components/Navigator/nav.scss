@@ -2,14 +2,19 @@
   display: flex;
   background-color: transparent;
   color: rgba(255, 255, 255, 0.8);
-  height: 100vh;
+  height: 100%;
   flex: 0 0 350px;
-  z-index: 1001;
+  z-index: 999;
+
+  @media (max-width: 850px) {
+    position: absolute;
+    left: -450px;
+    height: calc(100vh - 55px);
+  }
 
   .animated-nav {
     background-color: #031b4d;
     transition: background-color 1.5s ease-in;
-    height: 100%;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -75,20 +80,13 @@
           }
         }
 
-        @media (max-width: 1000px) {
-          position: relative;
+        @media (max-width: 850px) {
         }
         @media (max-height: 750px) {
           bottom: -15px;
         }
       }
     }
-  }
-
-  @media (max-width: 1000px) {
-    position: absolute;
-    left: -450px;
-    height: 100%;
   }
 }
 

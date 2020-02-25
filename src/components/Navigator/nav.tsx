@@ -1,14 +1,11 @@
-import React from "react";
+import React, { useCallback, useState } from "react";
 import { Link } from "react-router-dom";
 import { useSpring, animated } from "react-spring";
 import { useLocation } from "react-router";
 
-import "./nav.scss";
+import MobileNav from "../Mobile_Nav/mobile_nav";
 
-interface Props {
-  clicked: boolean;
-  setClicked: Function;
-}
+import "./nav.scss";
 
 const links = [
   {
@@ -28,29 +25,30 @@ const links = [
     match: "/contact"
   }
 ];
-const Nav = (props: Props) => {
-  const isMobile = window.innerWidth < 1000;
+const Nav = () => {
+  const [toggle, setToggle] = useState<boolean>(false);
   const { pathname } = useLocation();
 
+  const toggler = useCallback(() => setToggle(!toggle), [toggle]);
   const contactPath = "/contact";
 
   const sprProps = useSpring({
     opacity: 1,
-    reverse: !props.clicked && isMobile,
     transform: "translateX(0%)",
     from: {
-      opacity: pathname ? 1 : 0,
-      transform: pathname ? "translateX(0%)" : "translateX(-100%)"
+      transform: "translateX(-100%)",
+      opacity: 0
     }
   });
   const { x, fontSize } = useSpring({
-    x: pathname === contactPath && !isMobile ? 1 : 0,
-    fontSize: pathname === contactPath && !isMobile ? 50 : 42,
+    x: pathname === contactPath && !toggle ? 1 : 0,
+    fontSize: pathname === contactPath && !toggle ? 50 : 42,
     config: { duration: 1000 },
     from: { x: 0, fontSize: 42 }
   });
   return (
-    <div className={`master-nav ${props.clicked ? "appear" : ""}`}>
+    <div className={`master-nav ${toggle ? "appear" : ""}`}>
+      <MobileNav toggler={toggler} />
       <animated.div className={`animated-nav ${pathname}-nav`} style={sprProps}>
         <div className="subDiv">
           <div className="inner-con">
@@ -73,7 +71,11 @@ const Nav = (props: Props) => {
                     }
                     key={i}
                     to={match}
-                    onClick={() => props.setClicked(false)}
+                    onClick={() => {
+                      if (toggle) {
+                        setToggle(false);
+                      }
+                    }}
                     className="linker"
                   >
                     {header}
