@@ -40,7 +40,7 @@ export const projectsData: ProjectsType[] = [
     title: "Hue Desktop Controller",
     details:
       "Hue Controller, built using the Electron Framework, allows the client to modify lights connected to their Philips Hue Bridge. It accomplishes this by sending http requests with the modified data to the bridge's own API. The app allows the client to modify the selected lights color values, brightness, power status and much more.",
-    url: "https://fetchappbucket.s3.us-east-2.amazonaws.com/port/hue1.png",
+    url: "https://i.imgur.com/neWi2nd.png",
     links: [
       {
         title: "Repository",
@@ -55,7 +55,7 @@ export const projectsData: ProjectsType[] = [
     title: "GoPoll.me",
     details:
       "This app was inspired by Strawpoll.me. In my opinion a good web app is one that has a simple UI and an interactive experience. With the use of WebSockets and the power of Go, I created websocket rooms using Gorilla's incredible websocket package. With Websocket rooms, I can efficiently broadcast to users viewing specific types of content. In this case, I broadcast only to users viewing the same poll. This application allows the client to create and monitor poll results in real-time!",
-    url: "https://fetchappbucket.s3.us-east-2.amazonaws.com/port/poller.jpg",
+    url: "https://i.imgur.com/0SGMtnu.png",
     links: [
       { title: "Live Demo", link: "https://gopoll.me/" },
       { title: "Repository", link: "https://github.com/MarcDwyer/GoPoll" }
@@ -68,7 +68,7 @@ export const projectsData: ProjectsType[] = [
     title: "Twitch-Discovery",
     details:
       "Twitch Discovery! The purpose of this experimental project is to grant more exposure to streams that have a lower viewership. From my experience, there is an average total of 40,000 livestreams on Twitch at any given time. However, only the top 50 have above 1,000 viewers. The large majority have around 1 - 50 viewers. Twitch, at the current moment sort the streamers by viewership, so it is quite difficult to find content creators with lower viewership. The backend (NodeJS) randomly pulls an array of streamers every 2 hours and then updates the current list of streamers every 6 minutes (to check if they are still live). The frontend (React) allows the client to view the streamers status, viewership and stream details. Oh, and it also lets you interact with the streamer using the embedded twitch chat! The app is still experimental and gets updates on daily basis",
-    url: "https://fetchappbucket.s3.us-east-2.amazonaws.com/port/twitchu.jpg",
+    url: "https://imgur.com/PNX97H4.png",
     links: [
       { title: "Live Demo", link: "https://discover.gopoll.me/" },
       {

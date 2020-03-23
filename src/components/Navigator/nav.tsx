@@ -52,10 +52,7 @@ const Nav = () => {
       <animated.div className={`animated-nav ${pathname}-nav`} style={sprProps}>
         <div className="subDiv">
           <div className="inner-con">
-            <img
-              src="https://s3.us-east-2.amazonaws.com/fetchappbucket/port/me.jpg"
-              alt="me"
-            />
+            <img src="https://i.imgur.com/F4iPL1v.png" alt="me" />
             <div className="inner-text">
               <h1>Marc Dwyer</h1>
               <h3>Web Developer</h3>

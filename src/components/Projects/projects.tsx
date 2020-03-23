@@ -51,7 +51,9 @@ const Projects = () => {
                 </div>
                 {!/Reddit/g.test(item.title) ? (
                   <React.Fragment>
-                    {item.url && <img src={item.url} alt="application" />}
+                    {item.url && (
+                      <img src={item.url} title="source: imgur.com" />
+                    )}
                   </React.Fragment>
                 ) : (
                   <div className="tweeter">
