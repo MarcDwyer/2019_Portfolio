@@ -26,14 +26,14 @@ export const projectsData: ProjectsType[] = [
       {
         title: "Store Link",
         link:
-          "https://chrome.google.com/webstore/detail/netflix-stop-autoplay/fbcmkdogjehincilpicohipinoobijem"
+          "https://chrome.google.com/webstore/detail/netflix-stop-autoplay/fbcmkdogjehincilpicohipinoobijem",
       },
       {
         title: "Repository",
-        link: "https://github.com/MarcDwyer/netflix-stop-autoplay"
-      }
+        link: "https://github.com/MarcDwyer/netflix-stop-autoplay",
+      },
     ],
-    stack: "TypeScript"
+    stack: "TypeScript",
   },
   {
     id: 0,
@@ -44,11 +44,11 @@ export const projectsData: ProjectsType[] = [
     links: [
       {
         title: "Repository",
-        link: "https://github.com/MarcDwyer/electron-hue-controller"
+        link: "https://github.com/MarcDwyer/electron-hue-controller",
       },
-      { title: "View Website", link: "https://hue-controller.netlify.com/" }
+      { title: "View Website", link: "https://hue-controller.netlify.com/" },
     ],
-    stack: "React and Electron"
+    stack: "React and Electron",
   },
   {
     id: 1,
@@ -58,10 +58,10 @@ export const projectsData: ProjectsType[] = [
     url: "https://i.imgur.com/0SGMtnu.png",
     links: [
       { title: "Live Demo", link: "https://gopoll.me/" },
-      { title: "Repository", link: "https://github.com/MarcDwyer/GoPoll" }
+      { title: "Repository", link: "https://github.com/MarcDwyer/GoPoll" },
     ],
     stack: "React, Go and MongoDB",
-    hosted: "DigitalOcean"
+    hosted: "DigitalOcean",
   },
   {
     id: 2,
@@ -73,11 +73,11 @@ export const projectsData: ProjectsType[] = [
       { title: "Live Demo", link: "https://discover.gopoll.me/" },
       {
         title: "Repository",
-        link: "https://github.com/MarcDwyer/twitch-discovery"
-      }
+        link: "https://github.com/MarcDwyer/twitch-discovery",
+      },
     ],
     stack: "React and NodeJS",
-    hosted: "DigitalOcean"
+    hosted: "DigitalOcean",
   },
   {
     id: 4,
@@ -89,11 +89,11 @@ export const projectsData: ProjectsType[] = [
       { title: "Live Demo", link: "https://forumsite1234.herokuapp.com/" },
       {
         title: "Repository",
-        link: "https://github.com/MarcDwyer/New-Graphql-repo"
-      }
+        link: "https://github.com/MarcDwyer/New-Graphql-repo",
+      },
     ],
     stack: "React, NodeJS & GraphQL",
-    hosted: "Heroku"
+    hosted: "Heroku",
   },
   {
     id: 5,
@@ -103,41 +103,53 @@ export const projectsData: ProjectsType[] = [
     links: [
       {
         title: "Repository",
-        link: "https://github.com/MarcDwyer/2019_Portfolio"
-      }
+        link: "https://github.com/MarcDwyer/2019_Portfolio",
+      },
     ],
     stack: "React",
-    hosted: "Netlify"
-  }
+    hosted: "Netlify",
+  },
 ];
 interface WorkExperience {
   companyName: string;
-  duration: number;
+  duration?: string;
+  title: string;
   descriptionRole: string[];
   currentJob?: boolean;
 }
 export const WorkExp: WorkExperience[] = [
   {
     companyName: "Freelance Developer",
-    duration: 2,
+    title: "Full-Stack Developer",
     descriptionRole: [
       "Consult with local businesses",
       "Volunteer work with non-profit organizations",
       "Deploy multiple Web Apps using modern technologies",
-      "Create fast, fluid, and interactive web applications"
+      "Create fast, fluid, and interactive web applications",
     ],
-    currentJob: true
+    currentJob: true,
+  },
+  {
+    companyName: "Institute of Human and Machine Cognition",
+    duration: "1 Month",
+    title: "Full-Stack Developer",
+    descriptionRole: [
+      "Worked on Full-Stack administrative tool that was used to manage IHMC's projects",
+      "Introduced new deployment methods such as Docker",
+      "Communicated with Project Manager and Lead Developer on UI designs, tech stack and best possible solutions to create tool",
+      "Created front-end and back-end using modern technologies such as TypeScript, NodeJS and ReactJS",
+    ],
   },
   {
     companyName: "Whole Foods Co",
-    duration: 2,
+    title: "Cashier",
     descriptionRole: [
       "Assist customers in-person as well as over the phone",
       "Occasionally work as a team lead",
-      "Assist other departments in their duties"
+      "Assist other departments in their duties",
     ],
-    currentJob: true
-  }
+    currentJob: true,
+  },
 ];
 
 export const Params: any = {
@@ -146,26 +158,26 @@ export const Params: any = {
       value: 80,
       density: {
         enable: true,
-        value_area: 800
-      }
+        value_area: 800,
+      },
     },
     color: {
-      value: "#201616"
+      value: "#201616",
     },
     shape: {
       type: "circle",
       stroke: {
         width: 0,
-        color: "#000000"
+        color: "#000000",
       },
       polygon: {
-        nb_sides: 5
+        nb_sides: 5,
       },
       image: {
         src: "img/github.svg",
         width: 100,
-        height: 100
-      }
+        height: 100,
+      },
     },
     opacity: {
       value: 0.23675550259247283,
@@ -174,8 +186,8 @@ export const Params: any = {
         enable: false,
         speed: 1,
         opacity_min: 0.1,
-        sync: false
-      }
+        sync: false,
+      },
     },
     size: {
       value: 3,
@@ -184,15 +196,15 @@ export const Params: any = {
         enable: false,
         speed: 40,
         size_min: 0.1,
-        sync: false
-      }
+        sync: false,
+      },
     },
     line_linked: {
       enable: true,
       distance: 94.70220103698914,
       color: "#251b1b",
       opacity: 0.4,
-      width: 1
+      width: 1,
     },
     move: {
       enable: true,
@@ -205,48 +217,48 @@ export const Params: any = {
       attract: {
         enable: false,
         rotateX: 600,
-        rotateY: 1200
-      }
-    }
+        rotateY: 1200,
+      },
+    },
   },
   interactivity: {
     detect_on: "canvas",
     events: {
       onhover: {
         enable: true,
-        mode: "repulse"
+        mode: "repulse",
       },
       onclick: {
         enable: true,
-        mode: "push"
+        mode: "push",
       },
-      resize: true
+      resize: true,
     },
     modes: {
       grab: {
         distance: 400,
         line_linked: {
-          opacity: 1
-        }
+          opacity: 1,
+        },
       },
       bubble: {
         distance: 400,
         size: 40,
         duration: 2,
         opacity: 8,
-        speed: 3
+        speed: 3,
       },
       repulse: {
         distance: 200,
-        duration: 0.4
+        duration: 0.4,
       },
       push: {
-        particles_nb: 4
+        particles_nb: 4,
       },
       remove: {
-        particles_nb: 2
-      }
-    }
+        particles_nb: 2,
+      },
+    },
   },
-  retina_detect: true
+  retina_detect: true,
 };

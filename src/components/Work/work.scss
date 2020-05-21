@@ -1,68 +1,86 @@
 .card-flex {
-  display: grid;
   width: 100%;
   margin: auto;
-  grid-template-columns: repeat(2fr);
-  grid-gap: 10px;
 
-  @media (max-width: 850px) {
-    margin-top: 55px;
-  }
+  .inner-card {
+    grid-template-columns: repeat(2fr);
+    display: grid;
+    grid-gap: 10px;
 
-  .work-card {
-    border-radius: 0;
-    text-align: center;
-    display: flex;
-    flex-wrap: wrap;
-    height: 250px;
-    overflow-y: auto;
-    background-color: #eee;
+    @media (max-width: 850px) {
+      margin-top: 55px;
+    }
 
-    .actual-content {
-      margin: auto;
-      width: 100%;
+    .work-card {
+      width: 450px;
+      border-radius: 0;
+      text-align: center;
+      display: flex;
+      flex-wrap: wrap;
+      height: 295px;
+      overflow-y: auto;
+      background-color: #eee;
 
-      h2 {
-        padding: 10px 10px;
-        border-radius: 2px;
-        border-bottom: 2px solid #66b2b2;
-      }
+      .actual-content {
+        width: 100%;
 
-      .inner-content {
-        margin: auto;
-        display: flex;
-        width: 90%;
-        flex-direction: column;
+        .headers {
+          display: flex;
+          flex-direction: column;
+          border-bottom: 2px solid #66b2b2;
+          padding: 10px 10px;
 
-        span {
-          font-weight: 600;
+          .company-name {
+            font-weight: bold;
+            font-size: 24px;
+          }
+
+          .job-title {
+            margin-top: 8.5px;
+            font-size: 18px;
+          }
+        }
+
+        .inner-content {
+          margin: 10px auto auto auto;
+          display: flex;
+          width: 90%;
+          flex-direction: column;
+
+          span {
+            font-weight: 600;
+          }
+        }
+
+        li {
+          color: rgba(103, 103, 103, 0.85);
+          font-size: 14px;
+          font-weight: 550;
+          text-align: start;
         }
       }
 
-      li {
-        color: rgba(103, 103, 103, 0.85);
-        font-size: 14px;
-        font-weight: 550;
-        text-align: start;
+      @media (max-width: 1650px) {
+        & {
+          width: 40%;
+          margin: 15px auto 15px auto;
+        }
+      }
+
+      @media (max-width: 850px) {
+        & {
+          width: 75%;
+          margin: 15px auto 15px auto;
+        }
       }
     }
 
-    @media (max-width: 1650px) {
-      & {
-        width: 40%;
-        margin: 15px auto 15px auto;
-      }
-    }
-
-    @media (max-width: 850px) {
-      & {
-        width: 75%;
-        margin: 15px auto 15px auto;
-      }
+    @media (max-width: 2150px) {
+      grid-template-columns: repeat(1, 1fr);
     }
   }
+}
 
-  @media (max-width: 2150px) {
-    grid-template-columns: repeat(1, 1fr);
-  }
+.job-title {
+  font-size: 23px;
 }
