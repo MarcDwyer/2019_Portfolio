@@ -19,7 +19,7 @@ export const projectsData: ProjectsType[] = [
     id: 3,
     title: "Netflix-Stop-Autoplay",
     details:
-      "NSA is a Google Chrome extension that prevents Netflix from automatically playing videos",
+      "This is a chrome extension that prevents Netflix from autoplaying videos in desktop enviroments. It was developed using TypeScript.",
     url:
       "https://lh3.googleusercontent.com/NBuD6tD6HwVSVhIQT7bxffIHLEoLpwz898ufCR2H901Y9plbFLqr0SJrsmcHrMnrLuJak7w7=w640-h400-e365",
     links: [
