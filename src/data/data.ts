@@ -57,7 +57,7 @@ export const projectsData: ProjectsType[] = [
       "This app was inspired by Strawpoll.me. In my opinion a good web app is one that has a simple UI and an interactive experience. With the use of WebSockets and the power of Go, I created websocket rooms using Gorilla's incredible websocket package. With Websocket rooms, I can efficiently broadcast to users viewing specific types of content. In this case, I broadcast only to users viewing the same poll. This application allows the client to create and monitor poll results in real-time!",
     url: "https://i.imgur.com/0SGMtnu.png",
     links: [
-      { title: "Live Demo", link: "https://gopoll.me/" },
+      { title: "Live Demo", link: "https://gopoll.marcdwyer.dev/" },
       { title: "Repository", link: "https://github.com/MarcDwyer/GoPoll" },
     ],
     stack: "React, Go and MongoDB",
@@ -70,7 +70,7 @@ export const projectsData: ProjectsType[] = [
       "Twitch Discovery! The purpose of this experimental project is to grant more exposure to streams that have a lower viewership. From my experience, there is an average total of 40,000 livestreams on Twitch at any given time. However, only the top 50 have above 1,000 viewers. The large majority have around 1 - 50 viewers. Twitch, at the current moment sort the streamers by viewership, so it is quite difficult to find content creators with lower viewership. The backend (NodeJS) randomly pulls an array of streamers every 2 hours and then updates the current list of streamers every 6 minutes (to check if they are still live). The frontend (React) allows the client to view the streamers status, viewership and stream details. Oh, and it also lets you interact with the streamer using the embedded twitch chat! The app is still experimental and gets updates on daily basis",
     url: "https://imgur.com/PNX97H4.png",
     links: [
-      { title: "Live Demo", link: "https://discover.gopoll.me/" },
+      { title: "Live Demo", link: "https://discover.marcdwyer.dev" },
       {
         title: "Repository",
         link: "https://github.com/MarcDwyer/twitch-discovery",
