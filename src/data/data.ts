@@ -16,6 +16,19 @@ interface Links {
 
 export const projectsData: ProjectsType[] = [
   {
+    id: 1,
+    title: "GoPoll.me",
+    details:
+      "This app was inspired by Strawpoll.me. In my opinion a good web app is one that has a simple UI and an interactive experience. With the use of WebSockets and the power of Go, I created websocket rooms using Gorilla's incredible websocket package. With Websocket rooms, I can efficiently broadcast to users viewing specific types of content. In this case, I broadcast only to users viewing the same poll. This application allows the client to create and monitor poll results in real-time!",
+    url: "https://i.imgur.com/0SGMtnu.png",
+    links: [
+      { title: "Live Demo", link: "https://gopoll.marcdwyer.dev/" },
+      { title: "Repository", link: "https://github.com/MarcDwyer/GoPoll" },
+    ],
+    stack: "React, Go and MongoDB",
+    hosted: "DigitalOcean",
+  },
+  {
     id: 3,
     title: "Netflix-Stop-Autoplay",
     details:
@@ -36,6 +49,24 @@ export const projectsData: ProjectsType[] = [
     stack: "TypeScript",
   },
   {
+    id: 69,
+    title: "Twitch Followers",
+    details:
+      "An application that allows the client to lookup who users are following on TwitchTV. Also includes a pretty unique implementation oh recent search history",
+    url: "https://i.imgur.com/Gedd4uj.png",
+    links: [
+      {
+        title: "Live Demo",
+        link: "https://twitch-followers.marcdwyer.dev/",
+      },
+      {
+        title: "Repository",
+        link: "https://github.com/MarcDwyer/twitch-followers",
+      },
+    ],
+    stack: "React and Deno",
+  },
+  {
     id: 0,
     title: "Hue Desktop Controller",
     details:
@@ -50,19 +81,7 @@ export const projectsData: ProjectsType[] = [
     ],
     stack: "React and Electron",
   },
-  {
-    id: 1,
-    title: "GoPoll.me",
-    details:
-      "This app was inspired by Strawpoll.me. In my opinion a good web app is one that has a simple UI and an interactive experience. With the use of WebSockets and the power of Go, I created websocket rooms using Gorilla's incredible websocket package. With Websocket rooms, I can efficiently broadcast to users viewing specific types of content. In this case, I broadcast only to users viewing the same poll. This application allows the client to create and monitor poll results in real-time!",
-    url: "https://i.imgur.com/0SGMtnu.png",
-    links: [
-      { title: "Live Demo", link: "https://gopoll.marcdwyer.dev/" },
-      { title: "Repository", link: "https://github.com/MarcDwyer/GoPoll" },
-    ],
-    stack: "React, Go and MongoDB",
-    hosted: "DigitalOcean",
-  },
+
   {
     id: 2,
     title: "Twitch-Discovery",
