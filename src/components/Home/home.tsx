@@ -21,7 +21,7 @@ const Home = () => {
   return (
     <div className="master home">
       <Particles height={"100%"} width={"100%"} params={Params} />
-      <animated.div className="welcome" style={iProps}>
+      <div className="welcome" style={iProps}>
         <div className="home-header">
           <span className="first-header">MARC DWYER</span>
           <span>Full-Stack Developer</span>
@@ -29,7 +29,7 @@ const Home = () => {
         <Link className="home-projects" to="/projects">
           View Projects
         </Link>
-      </animated.div>
+      </div>
       <animated.i className="fa fa-arrow-left" style={LinkDiv} />
     </div>
   );

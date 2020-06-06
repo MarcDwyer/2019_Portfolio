@@ -10,20 +10,20 @@ import "./nav.scss";
 const links = [
   {
     header: "Home",
-    match: "/"
+    match: "/",
   },
   {
     header: "Projects",
-    match: "/projects"
+    match: "/projects",
   },
   {
     header: "Work",
-    match: "/work"
+    match: "/work",
   },
   {
     header: "Contact",
-    match: "/contact"
-  }
+    match: "/contact",
+  },
 ];
 const Nav = () => {
   const [toggle, setToggle] = useState<boolean>(false);
@@ -37,19 +37,19 @@ const Nav = () => {
     transform: "translateX(0%)",
     from: {
       transform: "translateX(-100%)",
-      opacity: 0
-    }
+      opacity: 0,
+    },
   });
   const { x, fontSize } = useSpring({
     x: pathname === contactPath && !toggle ? 1 : 0,
     fontSize: pathname === contactPath && !toggle ? 50 : 42,
     config: { duration: 1000 },
-    from: { x: 0, fontSize: 42 }
+    from: { x: 0, fontSize: 42 },
   });
   return (
     <div className={`master-nav ${toggle ? "appear" : ""}`}>
       <MobileNav toggler={toggler} />
-      <animated.div className={`animated-nav ${pathname}-nav`} style={sprProps}>
+      <div className={`animated-nav ${pathname}-nav`} style={sprProps}>
         <div className="subDiv">
           <div className="inner-con">
             <img src="https://i.imgur.com/F4iPL1v.png" alt="me" />
@@ -61,11 +61,9 @@ const Nav = () => {
               {links.map(({ header, match }, i) => {
                 return (
                   <Link
-                    style={
-                      pathname === match
-                        ? { color: "rgba(255, 255, 255, 1)" }
-                        : {}
-                    }
+                    style={pathname === match
+                      ? { color: "rgba(255, 255, 255, 1)" }
+                      : {}}
                     key={i}
                     to={match}
                     onClick={() => {
@@ -97,13 +95,13 @@ const Nav = () => {
                     transform: x
                       .interpolate({
                         range: [0, 0.25, 0.35, 0.45, 0.55, 0.65, 0.75, 1],
-                        output: [1, 0.97, 0.9, 1.1, 0.9, 1.1, 1.03, 1]
+                        output: [1, 0.97, 0.9, 1.1, 0.9, 1.1, 1.03, 1],
                       })
-                      .interpolate(x => `scale(${x})`),
+                      .interpolate((x) => `scale(${x})`),
                     fontSize: fontSize.interpolate({
                       range: [33, 35, 37, 40, 44],
-                      output: [33, 36, 40, 44, 54]
-                    })
+                      output: [33, 36, 40, 44, 54],
+                    }),
                   }}
                 />
                 <animated.a
@@ -117,20 +115,20 @@ const Nav = () => {
                     transform: x
                       .interpolate({
                         range: [0, 0.25, 0.35, 0.45, 0.55, 0.65, 0.75, 1],
-                        output: [1, 0.97, 0.9, 1.1, 0.9, 1.1, 1.03, 1]
+                        output: [1, 0.97, 0.9, 1.1, 0.9, 1.1, 1.03, 1],
                       })
-                      .interpolate(x => `scale(${x})`),
+                      .interpolate((x) => `scale(${x})`),
                     fontSize: fontSize.interpolate({
                       range: [33, 35, 37, 40],
-                      output: [33, 36, 40, 44]
-                    })
+                      output: [33, 36, 40, 44],
+                    }),
                   }}
                 />
               </div>
             </div>
           </div>
         </div>
-      </animated.div>
+      </div>
     </div>
   );
 };
