@@ -1,7 +1,11 @@
 import React from "react";
 import { animated, useSpring } from "react-spring";
 import { Link } from "react-router-dom";
+
+import Particles from "react-particles-js";
+
 import "./home.scss";
+import { Params } from "../../particle_data";
 
 const Home = () => {
   const iProps = useSpring({
@@ -16,6 +20,7 @@ const Home = () => {
   });
   return (
     <div className="master home">
+      <Particles height={"100%"} width={"100%"} params={Params} />
       <animated.div className="welcome" style={iProps}>
         <div className="home-header">
           <span className="first-header">MARC DWYER</span>
