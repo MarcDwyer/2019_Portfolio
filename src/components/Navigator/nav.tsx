@@ -54,12 +54,12 @@ const Nav = () => {
     from: { x: 0, fontSize: 42 },
   });
 
-  useEffect(() => {
-    setTimeout(() => {
-      setImg(images.yinYang);
-      setTimeout(() => setImg(images.myImg), 150);
-    }, 1200);
-  }, []);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setImg(images.yinYang);
+  //     setTimeout(() => setImg(images.myImg), 150);
+  //   }, 1200);
+  // }, []);
   return (
     <div className={`master-nav ${toggle ? "appear" : ""}`}>
       <MobileNav toggler={toggler} />
