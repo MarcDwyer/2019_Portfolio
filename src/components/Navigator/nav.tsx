@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useSpring, animated } from "react-spring";
 import { useLocation } from "react-router";
@@ -25,8 +25,14 @@ const links = [
     match: "/contact",
   },
 ];
+
+const images = {
+  yinYang: "https://i.imgur.com/1DdG6dE.png",
+  myImg: "https://i.imgur.com/F4iPL1v.png",
+};
 const Nav = () => {
   const [toggle, setToggle] = useState<boolean>(false);
+  const [img, setImg] = useState<string>(images.myImg);
   const { pathname } = useLocation();
 
   const toggler = useCallback(() => setToggle(!toggle), [toggle]);
@@ -46,13 +52,20 @@ const Nav = () => {
     config: { duration: 1000 },
     from: { x: 0, fontSize: 42 },
   });
+
+  useEffect(() => {
+    setTimeout(() => {
+      setImg(images.yinYang);
+      setTimeout(() => setImg(images.myImg), 150);
+    }, 1200);
+  }, []);
   return (
     <div className={`master-nav ${toggle ? "appear" : ""}`}>
       <MobileNav toggler={toggler} />
       <div className={`animated-nav ${pathname}-nav`} style={sprProps}>
         <div className="subDiv">
           <div className="inner-con">
-            <img src="https://i.imgur.com/F4iPL1v.png" alt="me" />
+            <img src={img} alt="me" />
             <div className="inner-text">
               <h1>Marc Dwyer</h1>
               <h3>Web Developer</h3>
