@@ -27,7 +27,8 @@ const links = [
 ];
 
 const images = {
-  yinYang: "https://i.imgur.com/1DdG6dE.png",
+  yinYang:
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Yin_and_yang.svg/1024px-Yin_and_yang.svg.png",
   myImg: "https://i.imgur.com/F4iPL1v.png",
 };
 const Nav = () => {
