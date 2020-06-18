@@ -1,7 +1,7 @@
 import React from "react";
 import { animated, useSpring } from "react-spring";
 import { Tweet } from "react-twitter-widgets";
-import { projectsData } from "../../data/data";
+import ProjectData from "../../data/projects";
 import { Container } from "../../styled-comps/containers";
 
 import "./projects.scss";
@@ -9,12 +9,12 @@ import "./projects.scss";
 const Projects = () => {
   const masterProp = useSpring({
     opacity: 1,
-    from: { opacity: 0 }
+    from: { opacity: 0 },
   });
   return (
     <Container className="master projects" style={masterProp}>
       <animated.div className="sub-project" style={masterProp}>
-        {projectsData.map((item, i) => {
+        {ProjectData.map((item, i) => {
           const int = i + 2;
           const isEven = int % 2 === 0;
           console.log(isEven);
@@ -31,7 +31,7 @@ const Projects = () => {
                     {item.hosted && <small> -- hosted on {item.hosted}</small>}
                   </h2>
                   <div className="live-demo">
-                    {item.links.map(i => {
+                    {item.links.map((i) => {
                       const myTest = /Live|Website|Store/g.test(i.title);
                       return (
                         <a
