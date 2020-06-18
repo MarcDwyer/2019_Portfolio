@@ -1,7 +1,7 @@
 import React from "react";
 import { animated, useSpring } from "react-spring";
 import { Tweet } from "react-twitter-widgets";
-import ProjectData from "../../data/projects";
+import ProjectData from "../../data/projects_data";
 import { Container } from "../../styled-comps/containers";
 
 import "./projects.scss";
