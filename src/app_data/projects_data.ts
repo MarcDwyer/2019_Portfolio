@@ -116,6 +116,6 @@ const typer: ProjectsType = {
   stack: "React, TypeScript and Go",
   hosted: "DigitalOcean",
 };
-const Projects: ProjectsType[] = [gopoll, typer, nsa, tf, hc, td];
+const ProjectData: ProjectsType[] = [gopoll, typer, nsa, tf, hc, td];
 
-export default Projects;
+export default ProjectData;

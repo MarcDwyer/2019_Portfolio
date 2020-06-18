@@ -1,7 +1,7 @@
 import React from "react";
 import { animated, useSpring } from "react-spring";
 import { Tweet } from "react-twitter-widgets";
-import ProjectData from "../../data/projects_data";
+import PData from "../../app_data/projects_data";
 import { Container } from "../../styled-comps/containers";
 
 import "./projects.scss";
@@ -14,7 +14,7 @@ const Projects = () => {
   return (
     <Container className="master projects" style={masterProp}>
       <animated.div className="sub-project" style={masterProp}>
-        {ProjectData.map((item, i) => {
+        {PData.map((item, i) => {
           const int = i + 2;
           const isEven = int % 2 === 0;
           console.log(isEven);
@@ -51,9 +51,7 @@ const Projects = () => {
                 </div>
                 {!/Reddit/g.test(item.title) ? (
                   <React.Fragment>
-                    {item.url && (
-                      <img src={item.url} title="source: imgur.com" />
-                    )}
+                    {item.url && <img src={item.url} alt="source: imgur.com" />}
                   </React.Fragment>
                 ) : (
                   <div className="tweeter">

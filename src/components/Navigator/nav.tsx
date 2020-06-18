@@ -1,4 +1,4 @@
-import React, { useCallback, useState, useEffect } from "react";
+import React, { useCallback, useState } from "react";
 import { Link } from "react-router-dom";
 import { useSpring, animated } from "react-spring";
 import { useLocation } from "react-router";
@@ -54,12 +54,6 @@ const Nav = () => {
     from: { x: 0, fontSize: 42 },
   });
 
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setImg(images.yinYang);
-  //     setTimeout(() => setImg(images.myImg), 150);
-  //   }, 1200);
-  // }, []);
   return (
     <div className={`master-nav ${toggle ? "appear" : ""}`}>
       <MobileNav toggler={toggler} />
@@ -75,9 +69,11 @@ const Nav = () => {
               {links.map(({ header, match }, i) => {
                 return (
                   <Link
-                    style={pathname === match
-                      ? { color: "rgba(255, 255, 255, 1)" }
-                      : {}}
+                    style={
+                      pathname === match
+                        ? { color: "rgba(255, 255, 255, 1)" }
+                        : {}
+                    }
                     key={i}
                     to={match}
                     onClick={() => {

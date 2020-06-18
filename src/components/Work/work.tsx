@@ -1,5 +1,5 @@
 import React from "react";
-import WorkExp from "../../data/work_exp";
+import WorkExp from "../../app_data/work_exp";
 import { useSpring, animated } from "react-spring";
 import { Container } from "../../styled-comps/containers";
 import { myColors } from "../../styled-comps/global-styles";
