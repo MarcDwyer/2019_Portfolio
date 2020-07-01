@@ -28,7 +28,7 @@ const Projects = () => {
                 <div className="body">
                   <h2 className="title">
                     {item.title}
-                    {item.hosted && <small> -- hosted on {item.hosted}</small>}
+                    {item.hosted && <small>-- hosted on {item.hosted}</small>}
                   </h2>
                   <div className="live-demo">
                     {item.links.map((i) => {
@@ -49,15 +49,18 @@ const Projects = () => {
                   <span>Stack: {item.stack}</span>
                   <p>{item.details}</p>
                 </div>
-                {!/Reddit/g.test(item.title) ? (
-                  <React.Fragment>
-                    {item.url && <img src={item.url} alt="source: imgur.com" />}
-                  </React.Fragment>
-                ) : (
-                  <div className="tweeter">
-                    <Tweet tweetId={"1138879923362455553"} />
-                  </div>
-                )}
+                {!/Reddit/g.test(item.title)
+                  ? (
+                    <React.Fragment>
+                      {item.url &&
+                        <img src={item.url} alt="source: imgur.com" />}
+                    </React.Fragment>
+                  )
+                  : (
+                    <div className="tweeter">
+                      <Tweet tweetId={"1138879923362455553"} />
+                    </div>
+                  )}
               </div>
             </div>
           );

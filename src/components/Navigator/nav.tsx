@@ -6,6 +6,8 @@ import { useLocation } from "react-router";
 import MobileNav from "../Mobile_Nav/mobile_nav";
 
 import "./nav.scss";
+import { ThemeConsumer } from "styled-components";
+import { DefaultTheme } from "../../themes";
 
 const links = [
   {
@@ -55,9 +57,11 @@ const Nav = () => {
   });
 
   return (
-    <div className={`master-nav ${toggle ? "appear" : ""}`}>
+    <div
+      className={`master-nav ${toggle ? "appear" : ""}`}
+    >
       <MobileNav toggler={toggler} />
-      <div className={`animated-nav ${pathname}-nav`} style={sprProps}>
+      <div className={`animated-nav ${pathname}-nav`} style={{ ...sprProps }}>
         <div className="subDiv">
           <div className="inner-con">
             <img src={img} alt="me" />
@@ -69,11 +73,9 @@ const Nav = () => {
               {links.map(({ header, match }, i) => {
                 return (
                   <Link
-                    style={
-                      pathname === match
-                        ? { color: "rgba(255, 255, 255, 1)" }
-                        : {}
-                    }
+                    style={pathname === match
+                      ? { color: "rgba(255, 255, 255, 1)" }
+                      : {}}
                     key={i}
                     to={match}
                     onClick={() => {

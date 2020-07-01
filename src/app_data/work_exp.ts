@@ -20,23 +20,14 @@ const WorkExp: WorkExperience[] = [
   {
     companyName: "Institute of Human and Machine Cognition",
     title: "Full-Stack Developer",
-    currentJob: true,
+    currentJob: false,
+    duration: "3 months",
     descriptionRole: [
       "Worked on Full-Stack administrative tool that was used to manage IHMC's projects",
       "Introduced new deployment methods such as Docker",
       "Communicated with Project Manager and Lead Developer on UI designs, tech stack and best possible solutions to create tool",
       "Created front-end and back-end using modern technologies such as TypeScript, NodeJS and ReactJS",
     ],
-  },
-  {
-    companyName: "Whole Foods Co",
-    title: "Cashier",
-    descriptionRole: [
-      "Assist customers in-person as well as over the phone",
-      "Occasionally work as a team lead",
-      "Assist other departments in their duties",
-    ],
-    currentJob: true,
   },
 ];
 
