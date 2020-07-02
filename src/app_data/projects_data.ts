@@ -113,7 +113,7 @@ const typer: ProjectsType = {
       link: "https://github.com/MarcDwyer/arcade-typeracer",
     },
   ],
-  stack: "React, TypeScript and Go",
+  stack: "React, TypeScript and Deno",
   hosted: "DigitalOcean",
 };
 const ProjectData: ProjectsType[] = [gopoll, typer, nsa, tf, hc, td];
