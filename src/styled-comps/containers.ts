@@ -16,4 +16,12 @@ export const Container = styled.div<PContainer>`
   overflow-y: auto;
   overflow-x: hidden;
   display: flex;
+
+  @media (max-width: 850px) {
+    position: absolute;
+    top: 55px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
 `;

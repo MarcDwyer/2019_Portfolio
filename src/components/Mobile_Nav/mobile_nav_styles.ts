@@ -15,9 +15,10 @@ export const HamburgerMenu = styled(FaHamburger)<PHamburger>`
 export const MobileNavbar = styled.nav`
   position: fixed;
   top: 0;
+  left: 0;
+  right: 0%;
   overflow: hidden;
   z-index: 1000;
-  width: 100%;
   height: 55px;
   background-color: ${NewTheme.navColor};
   display: none;
