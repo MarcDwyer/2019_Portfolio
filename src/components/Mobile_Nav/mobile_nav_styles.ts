@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { FaHamburger } from "react-icons/fa";
-import { NewTheme } from "../themes";
+import { NewTheme } from "../../themes";
 
 type PHamburger = {
   color?: string;

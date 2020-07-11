@@ -3,7 +3,7 @@ import { createPortal } from "react-dom";
 import {
   MobileNavbar,
   HamburgerMenu,
-} from "../../styled-comps/mobile_nav_styles";
+} from "./mobile_nav_styles";
 
 import "./mobile_nav.scss";
 import { NewTheme } from "../../themes";

@@ -12,7 +12,6 @@ type PContainer = {
 };
 export const Container = styled.div<PContainer>`
   width: 100%;
-  height: 100%;
   background-color: ${(p) => p.bgColor || "#eee"};
   overflow-y: auto;
   overflow-x: hidden;
