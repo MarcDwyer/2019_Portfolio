@@ -19,7 +19,6 @@
       flex-wrap: wrap;
       height: 315px;
       overflow-y: auto;
-      background-color: #eee;
 
       .actual-content {
         width: 100%;
@@ -27,7 +26,6 @@
         .headers {
           display: flex;
           flex-direction: column;
-          border-bottom: 2px solid #66b2b2;
           padding: 10px 10px;
 
           .company-name {
@@ -53,7 +51,7 @@
         }
 
         li {
-          color: rgba(103, 103, 103, 0.85);
+          color: inherit;
           font-size: 14px;
           font-weight: 550;
           text-align: start;

@@ -8,7 +8,7 @@ export const Params: any = {
       },
     },
     color: {
-      value: "#201616",
+      value: "#EEEEEE",
     },
     shape: {
       type: "circle",
@@ -48,7 +48,7 @@ export const Params: any = {
     line_linked: {
       enable: true,
       distance: 94.70220103698914,
-      color: "#251b1b",
+      color: "#EEEEEE",
       opacity: 0.4,
       width: 1,
     },

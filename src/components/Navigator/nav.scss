@@ -2,4 +2,14 @@
   flex: 0 0 335px;
   display: flex;
   flex-direction: column;
+  position: relative;
+
+  @media (max-width: 850px) {
+    display: none;
+  }
+}
+
+.appear {
+  display: flex;
+  flex: 0 0 100%;
 }

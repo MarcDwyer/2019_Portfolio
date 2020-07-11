@@ -1,12 +1,13 @@
 import styled from "styled-components";
 import { FaHamburger } from "react-icons/fa";
+import { NewTheme } from "../themes";
 
 type PHamburger = {
   color?: string;
   fontSize?: string;
 };
 export const HamburgerMenu = styled(FaHamburger)<PHamburger>`
-  color: ${p => p.color || "#eee"};
+  color: ${(p) => p.color || "#eee"};
   height: 95%;
   cursor: pointer;
 `;
@@ -18,7 +19,7 @@ export const MobileNavbar = styled.nav`
   z-index: 1000;
   width: 100%;
   height: 55px;
-  background-color: #666666;
+  background-color: ${NewTheme.navColor};
   display: none;
 
   @media (max-width: 850px) {

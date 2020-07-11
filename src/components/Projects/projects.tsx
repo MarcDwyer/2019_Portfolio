@@ -5,6 +5,7 @@ import PData from "../../app_data/projects_data";
 import { Container } from "../../styled-comps/containers";
 
 import "./projects.scss";
+import { NewTheme } from "../../themes";
 
 const Projects = () => {
   const masterProp = useSpring({
@@ -12,17 +13,26 @@ const Projects = () => {
     from: { opacity: 0 },
   });
   return (
-    <Container className="master projects" style={masterProp}>
-      <animated.div className="sub-project" style={masterProp}>
+    <Container
+      className="master projects"
+      style={{ backgroundColor: NewTheme.navColor }}
+    >
+      <animated.div
+        className="sub-project"
+        style={{
+          ...masterProp,
+          backgroundColor: NewTheme.darkBlue,
+          color: NewTheme.textColor,
+        }}
+      >
         {PData.map((item, i) => {
           const int = i + 2;
           const isEven = int % 2 === 0;
-          console.log(isEven);
           return (
             <div
-              style={{ backgroundColor: `${isEven ? "#bcbcbc" : "#D1D1D1"}` }}
               className={`project ${isEven ? "odd-par" : "even-par"}`}
               key={i}
+              style={{ borderBottom: `solid 1px ${NewTheme.navColor}` }}
             >
               <div className={`proj ${isEven ? "odd" : "even"}`}>
                 <div className="body">

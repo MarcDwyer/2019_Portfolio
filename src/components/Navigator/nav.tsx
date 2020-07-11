@@ -1,54 +1,21 @@
 import React, { useCallback, useState } from "react";
-import { Link } from "react-router-dom";
 import { useSpring, animated } from "react-spring";
 import { useLocation } from "react-router";
 
 import MobileNav from "../Mobile_Nav/mobile_nav";
 import Profile from "../Nav_Sub_Components/Profile/profile";
+import NavLinks from "../Nav_Sub_Components/Nav_Links/nav_links";
+import NavSocialLinks from "../Nav_Sub_Components/Nav_Social_Links/nav_social";
 
-import { Segment, InnerSegment } from "../../styled-comps/containers";
+import { NavSegment } from "../../styled-comps/nav_sc";
 
 import "./nav.scss";
 import { NewTheme } from "../../themes";
 
-const links = [
-  {
-    header: "Home",
-    match: "/",
-  },
-  {
-    header: "Projects",
-    match: "/projects",
-  },
-  {
-    header: "Work",
-    match: "/work",
-  },
-  {
-    header: "Contact",
-    match: "/contact",
-  },
-];
-
-const socialLinks = [
-  {
-    name: "github",
-    cName: "fa fa-github",
-    href: "https://github.com/MarcDwyer?tab=repositories",
-  },
-  {
-    name: "linkedIn",
-    cName: "fa fa-linkedin",
-    href: "https://www.linkedin.com/in/marc-dwyer-53087339/",
-  },
-];
-
 const Nav = () => {
   const [toggle, setToggle] = useState<boolean>(false);
-  const { pathname } = useLocation();
 
   const toggler = useCallback(() => setToggle(!toggle), [toggle]);
-  const contactPath = "/contact";
 
   const sprProps = useSpring({
     opacity: 1,
@@ -58,23 +25,19 @@ const Nav = () => {
       opacity: 0,
     },
   });
-  const { x, fontSize } = useSpring({
-    x: pathname === contactPath && !toggle ? 1 : 0,
-    fontSize: pathname === contactPath && !toggle ? 50 : 42,
-    config: { duration: 1000 },
-    from: { x: 0, fontSize: 42 },
-  });
-
+  console.log(toggle);
   return (
-    <div className="master-nav" style={{ backgroundColor: NewTheme.navColor }}>
-      <Segment>
-        <InnerSegment>
-          <Profile />
-        </InnerSegment>
-      </Segment>
-      <Segment>
-      </Segment>
-    </div>
+    <animated.div
+      className={`master-nav ${toggle ? "appear" : ""}`}
+      style={{ ...sprProps, backgroundColor: NewTheme.navColor }}
+    >
+      <NavSegment>
+        <MobileNav toggler={toggler} />
+        <Profile />
+        <NavLinks setToggle={setToggle} toggle={toggle} />
+        <NavSocialLinks />
+      </NavSegment>
+    </animated.div>
   );
 };
 
