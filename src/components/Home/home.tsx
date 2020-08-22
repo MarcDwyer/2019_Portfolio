@@ -1,5 +1,5 @@
 import React from "react";
-import { animated, useSpring } from "react-spring";
+import { useSpring } from "react-spring";
 
 import Particles from "react-particles-js";
 import { Params } from "../../particle_data";
@@ -38,10 +38,10 @@ const Home = () => {
           View Projects
         </ProjectHomeBtn>
       </div>
-      <animated.i
+      {/* <animated.i
         className="fa fa-arrow-left"
         style={{ ...LinkDiv, color: NewTheme.btnColor }}
-      />
+      /> */}
     </div>
   );
 };

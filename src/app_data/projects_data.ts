@@ -116,6 +116,18 @@ const typer: ProjectsType = {
   stack: "React, TypeScript and Deno",
   hosted: "DigitalOcean",
 };
-const ProjectData: ProjectsType[] = [gopoll, typer, nsa, tf, hc, td];
+const TMI: ProjectsType = {
+  id: 10001,
+  title: "tmi.ts",
+  details:
+    "Twitch Messaging Interface, tmi.ts allows users to join twitch channels to automate certain tasks. This is very similar to Node's package tmi.js.",
+  url: "https://upload.wikimedia.org/wikipedia/commons/8/84/Deno.svg",
+  links: [
+    { title: "deno.land", link: "https://deno.land/x/tmi@v0.0.2" },
+  ],
+  stack: "TypeScript",
+  hosted: "deno.land",
+};
+const ProjectData: ProjectsType[] = [TMI, gopoll, typer, nsa, tf, hc, td];
 
 export default ProjectData;
