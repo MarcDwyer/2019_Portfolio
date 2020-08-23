@@ -123,7 +123,7 @@ const TMI: ProjectsType = {
     "Twitch Messaging Interface, tmi.ts allows users to join twitch channels to automate certain tasks. This is very similar to Node's package tmi.js.",
   url: "https://upload.wikimedia.org/wikipedia/commons/8/84/Deno.svg",
   links: [
-    { title: "deno.land", link: "https://deno.land/x/tmi@v0.0.2" },
+    { title: "deno.land", link: "https://deno.land/x/tmi" },
   ],
   stack: "TypeScript",
   hosted: "deno.land",
