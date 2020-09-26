@@ -23,7 +23,7 @@ const Home = () => {
   return (
     <div
       className="master home"
-      style={{ backgroundColor: NewTheme.darkBlue }}
+      style={{ backgroundColor: NewTheme.navColor }}
     >
       <div className="welcome" style={iProps}>
         <div className="home-header">
