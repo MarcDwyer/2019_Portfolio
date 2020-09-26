@@ -16,6 +16,7 @@ export default function Profile() {
         <div className="headers">
           <h2>Marc Dwyer</h2>
           <h3>Web Developer</h3>
+          {/* <span className="skills">JavaScript/TS Developer</span> */}
         </div>
       </div>
     </div>

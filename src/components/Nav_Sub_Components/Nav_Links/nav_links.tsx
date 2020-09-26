@@ -3,7 +3,6 @@ import { NavAppLink } from "./nav_link_styles";
 import { useLocation } from "react-router";
 
 import "./nav_link_styles.scss";
-import { NewTheme } from "../../../themes";
 
 const appLinks = [
   {
@@ -11,7 +10,7 @@ const appLinks = [
     match: "/",
   },
   {
-    header: "Projects",
+    header: "Projects/Skills",
     match: "/projects",
   },
   {

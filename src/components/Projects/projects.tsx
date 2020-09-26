@@ -3,6 +3,7 @@ import { animated, useSpring } from "react-spring";
 import { Tweet } from "react-twitter-widgets";
 import PData from "../../app_data/projects_data";
 import { Container } from "../../styled-comps/containers";
+import Skills from "../Skills/skills";
 
 import "./projects.scss";
 import { NewTheme } from "../../themes";
@@ -25,6 +26,11 @@ const Projects = () => {
           color: NewTheme.textColor,
         }}
       >
+        <div className="project">
+          <div className="proj">
+            <Skills />
+          </div>
+        </div>
         {PData.map((item, i) => {
           const int = i + 2;
           const isEven = int % 2 === 0;
@@ -59,18 +65,15 @@ const Projects = () => {
                   <span>Stack: {item.stack}</span>
                   <p>{item.details}</p>
                 </div>
-                {!/Reddit/g.test(item.title)
-                  ? (
-                    <React.Fragment>
-                      {item.url &&
-                        <img src={item.url} alt="source: imgur.com" />}
-                    </React.Fragment>
-                  )
-                  : (
-                    <div className="tweeter">
-                      <Tweet tweetId={"1138879923362455553"} />
-                    </div>
-                  )}
+                {!/Reddit/g.test(item.title) ? (
+                  <React.Fragment>
+                    {item.url && <img src={item.url} alt="source: imgur.com" />}
+                  </React.Fragment>
+                ) : (
+                  <div className="tweeter">
+                    <Tweet tweetId={"1138879923362455553"} />
+                  </div>
+                )}
               </div>
             </div>
           );

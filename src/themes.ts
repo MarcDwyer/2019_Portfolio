@@ -17,4 +17,5 @@ export enum NewTheme {
   textColor = "#b4bac2",
   shadeOne = "#2f333c",
   shadeTwo = "#333a42",
+  borderColor = "#676767",
 }

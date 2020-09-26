@@ -12,7 +12,6 @@ export const ProjectHomeBtn = styled(Link)`
       font-weight: 600;
       padding: 15px 15px;
       opacity: 1;
-      border-radius: 5px;
 
       &:hover {
         opacity: 0.9;

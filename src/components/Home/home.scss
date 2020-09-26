@@ -20,11 +20,15 @@
     width: 25%;
     margin: auto;
     z-index: 2;
+    border-left: 1px solid rgb(103, 103, 103);
+    border-right: 1px solid rgb(103, 103, 103);
+    padding-left: 25px;
+    padding-right: 25px;
 
     .home-header {
       display: flex;
-      flex-direction: column;
       border-bottom: 1px solid rgb(103, 103, 103);
+      flex-direction: column;
       padding-bottom: 15px;
 
       span {
