@@ -128,6 +128,6 @@ const TMI: ProjectsType = {
   stack: "TypeScript",
   hosted: "deno.land",
 };
-const ProjectData: ProjectsType[] = [TMI, gopoll, typer, nsa, tf, hc, td];
+const ProjectData: ProjectsType[] = [TMI, gopoll,tf, typer, nsa, hc, td];
 
 export default ProjectData;
