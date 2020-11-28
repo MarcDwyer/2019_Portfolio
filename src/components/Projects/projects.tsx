@@ -4,6 +4,7 @@ import { Tweet } from "react-twitter-widgets";
 import PData from "../../app_data/projects_data";
 import { Container } from "../../styled-comps/containers";
 import Skills from "../Skills/skills";
+import Languages from "../Languages/languages";
 
 import "./projects.scss";
 import { NewTheme } from "../../themes";
@@ -29,6 +30,11 @@ const Projects = () => {
         <div className="project">
           <div className="proj">
             <Skills />
+          </div>
+        </div>
+        <div className="project">
+          <div className="proj">
+            <Languages />
           </div>
         </div>
         {PData.map((item, i) => {

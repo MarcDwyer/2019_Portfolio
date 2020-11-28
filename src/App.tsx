@@ -1,20 +1,19 @@
 import React from "react";
-import Nav from "../Navigator/nav";
 import { Route, Switch } from "react-router-dom";
 import { Router } from "react-router";
 import { createBrowserHistory } from "history";
 
-import Projects from "../Projects/projects";
-import Home from "../Home/home";
-import Contact from "../Contact/contact";
-import Work from "../Work/work";
+import Nav from "./components/Navigator/nav";
+import Projects from "./components/Projects/projects";
+import Home from "./components/Home/home";
+import Contact from "./components/Contact/contact";
+import Work from "./components/Work/work";
 
-import { MainContainer } from "../../styled-comps/containers";
-
-import "./main.scss";
+import { MainContainer } from "./styled-comps/containers";
 
 export const history = createBrowserHistory();
-const Main = () => {
+
+export default function App() {
   return (
     <MainContainer>
       <Router history={history}>
@@ -28,6 +27,4 @@ const Main = () => {
       </Router>
     </MainContainer>
   );
-};
-
-export default Main;
+}
