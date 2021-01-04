@@ -72,7 +72,8 @@ const hc: ProjectsType = {
   title: "Hue Desktop Controller",
   details:
     "Hue Controller, built using the Electron Framework, allows the client to modify lights connected to their Philips Hue Bridge. It accomplishes this by sending http requests with the modified data to the bridge's own API. The app allows the client to modify the selected lights color values, brightness, power status and much more.",
-  url: "https://i.imgur.com/neWi2nd.png",
+  url:
+    "https://github.com/MarcDwyer/hue-desktop-controller/raw/master/icons/hue1.png",
   links: [
     {
       title: "Repository",
@@ -122,12 +123,33 @@ const TMI: ProjectsType = {
   details:
     "Twitch Messaging Interface, tmi.ts allows users to join twitch channels to automate certain tasks. This is very similar to Node's package tmi.js.",
   url: "https://upload.wikimedia.org/wikipedia/commons/8/84/Deno.svg",
-  links: [
-    { title: "deno.land", link: "https://deno.land/x/tmi" },
-  ],
+  links: [{ title: "deno.land", link: "https://deno.land/x/tmi" }],
   stack: "TypeScript",
   hosted: "deno.land",
 };
-const ProjectData: ProjectsType[] = [TMI, gopoll,tf, typer, nsa, hc, td];
+
+const OkChat: ProjectsType = {
+  id: 10101,
+  title: "Ok-Chat",
+  details:
+    "Ok-Chat is a Desktop application that allows users to join Twitch streamer’s IRC channels. Ok-Chat includes a plethora of features such as user search prediction, color coded messages, efficient memory management, easy to use UI, followed streams tracker and the use of 3rd party emotes like BTTV. It’s important to note that this software is very early in the development process and some of these features may be buggy or not exist yet, but trust me, they will come.",
+  url:
+    "https://camo.githubusercontent.com/ab1ecbf1579fa62974b4c73ea1df4b0fdb3575331c4ca05e1d204007df15dba4/68747470733a2f2f692e696d6775722e636f6d2f485759387235712e706e67",
+  links: [
+    { title: "Repository", link: "https://github.com/MarcDwyer/Ok-Chat" },
+  ],
+  stack: "TypeScript, React and Electron",
+  hosted: "Github",
+};
+const ProjectData: ProjectsType[] = [
+  TMI,
+  OkChat,
+  gopoll,
+  tf,
+  typer,
+  nsa,
+  hc,
+  td,
+];
 
 export default ProjectData;
