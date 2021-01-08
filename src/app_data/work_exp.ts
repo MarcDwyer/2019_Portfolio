@@ -20,8 +20,7 @@ const WorkExp: WorkExperience[] = [
   {
     companyName: "Institute of Human and Machine Cognition",
     title: "Full-Stack Developer",
-    currentJob: false,
-    duration: "< 1 year",
+    currentJob: true,
     descriptionRole: [
       "Worked on Full-Stack administrative tool that was used to manage IHMC's projects",
       "Introduced new deployment methods such as Docker",
