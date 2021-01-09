@@ -7,20 +7,23 @@ interface WorkExperience {
 }
 const WorkExp: WorkExperience[] = [
   {
-    companyName: "Freelance Developer",
+    companyName: "M&D Technologies",
     title: "Full-Stack Developer",
     descriptionRole: [
-      "Consult with local businesses",
-      "Volunteer work with non-profit organizations",
-      "Deploy multiple Web Apps using modern technologies",
-      "Create fast, fluid, and interactive web applications",
+      "Design and architecture of SPAs and PWAs using React, TypeScript and Redux/Mobx",
+      "Development of React Native mobile application",
+      "Built backend REST endpoints using TypeScript, NodeJS, Postgres and Go",
+      "Integration of TypeScript, applying OOP principles",
+      "Refactoring of applications to improve performance",
+      "Developing and documenting of third party modules for Deno",
     ],
     currentJob: true,
   },
   {
     companyName: "Institute of Human and Machine Cognition",
     title: "Full-Stack Developer",
-    currentJob: true,
+    currentJob: false,
+    duration: "3 months",
     descriptionRole: [
       "Worked on Full-Stack administrative tool that was used to manage IHMC's projects",
       "Introduced new deployment methods such as Docker",
