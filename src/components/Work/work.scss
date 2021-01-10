@@ -1,11 +1,12 @@
 .card-flex {
   width: 100%;
-  margin: auto;
+  display: flex;
+  background-color: transparent;
 
   .inner-card {
-    grid-template-columns: repeat(2fr);
-    display: grid;
-    grid-gap: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
 
     .work-card {
       width: 450px;
@@ -13,8 +14,8 @@
       text-align: center;
       display: flex;
       flex-wrap: wrap;
-      height: 315px;
       overflow-y: auto;
+      margin-bottom: 25px;
 
       .actual-content {
         width: 100%;
@@ -48,7 +49,7 @@
 
         li {
           color: inherit;
-          font-size: 14px;
+          font-size: 18px;
           font-weight: 550;
           text-align: start;
         }
@@ -56,14 +57,14 @@
 
       @media (max-width: 1650px) {
         & {
-          width: 40%;
+          width: 55%;
           margin: 15px auto 15px auto;
         }
       }
 
       @media (max-width: 850px) {
         & {
-          width: 75%;
+          width: 85%;
           margin: 15px auto 15px auto;
         }
       }

@@ -1,3 +1,5 @@
+import { attachId } from "../util";
+
 export interface ProjectsType {
   id: number;
   title: string;
@@ -152,4 +154,4 @@ const ProjectData: ProjectsType[] = [
   td,
 ];
 
-export default ProjectData;
+export default attachId(ProjectData);

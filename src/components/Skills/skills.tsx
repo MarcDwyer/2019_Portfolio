@@ -1,4 +1,4 @@
-import React from "react";
+import { nanoid } from "nanoid";
 import { NewTheme } from "../../themes";
 
 import "./skills.scss";
@@ -14,11 +14,12 @@ function Skills() {
   ];
   return (
     <div className="skills-intro">
-      <h2>Most commonly used technologies</h2>
+      <h2>Most commonly used technologies:</h2>
       <div className="tech-skills">
         {skills.map((skill) => {
           return (
             <span
+              key={nanoid(5)}
               style={{ borderColor: NewTheme.borderColor }}
               className="inner-skill"
             >

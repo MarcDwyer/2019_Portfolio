@@ -1,6 +1,4 @@
 import React, { useCallback, useState } from "react";
-import { useSpring, animated } from "react-spring";
-import { useLocation } from "react-router";
 
 import MobileNav from "../Mobile_Nav/mobile_nav";
 import Profile from "../Nav_Sub_Components/Profile/profile";
@@ -10,35 +8,54 @@ import NavSocialLinks from "../Nav_Sub_Components/Nav_Social_Links/nav_social";
 import { NavSegment } from "../../styled-comps/nav_sc";
 
 import "./nav.scss";
-import { NewTheme } from "../../themes";
-
-const Nav = () => {
+import { observer } from "mobx-react-lite";
+import { ThemeStore } from "../../store/theme_store";
+import { FaMoon, FaSun, FaToggleOff, FaToggleOn } from "react-icons/fa";
+type Props = {
+  ts: ThemeStore;
+};
+const Nav = observer(({ ts }: Props) => {
   const [toggle, setToggle] = useState<boolean>(false);
 
   const toggler = useCallback(() => setToggle(!toggle), [toggle]);
 
-  const sprProps = useSpring({
-    opacity: 1,
-    transform: "translateX(0%)",
-    from: {
-      transform: "translateX(-100%)",
-      opacity: 0,
-    },
-  });
-  console.log(toggle);
+  const ThemeChanger = () => {
+    return (
+      <div className="theme-changer">
+        {ts.isDark && (
+          <>
+            <FaMoon className="sunMoon" />
+            <FaToggleOn />
+          </>
+        )}
+        {!ts.isDark && (
+          <>
+            <FaSun className="sunMoon" />
+            <FaToggleOff />
+          </>
+        )}
+      </div>
+    );
+  };
   return (
-    <animated.div
+    <div
       className={`master-nav ${toggle ? "appear" : ""}`}
-      style={{ ...sprProps, backgroundColor: NewTheme.navColor }}
+      style={{
+        backgroundColor: ts.theme.bgColor,
+        color: ts.theme.color,
+      }}
     >
       <NavSegment>
+      <div className="theme-toggler" onClick={() => ts.changeTheme()}>
+        {ThemeChanger()}
+      </div>
         <MobileNav toggler={toggler} />
-        <Profile />
-        <NavLinks setToggle={setToggle} toggle={toggle} />
+        <Profile theme={ts.theme} />
+        <NavLinks theme={ts.theme} setToggle={setToggle} toggle={toggle} />
         <NavSocialLinks />
       </NavSegment>
-    </animated.div>
+    </div>
   );
-};
+});
 
 export default Nav;

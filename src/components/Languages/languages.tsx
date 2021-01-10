@@ -8,8 +8,12 @@ export default function Languages() {
     <div className="language">
       <div className="language-container">
         <span className="fluent-in">Fluent in:</span>
-        {langs.map((l) => {
-          return <span className="lang">{l}</span>;
+        {langs.map((l, i) => {
+          return (
+            <span key={i} className="lang">
+              {l}
+            </span>
+          );
         })}
       </div>
     </div>

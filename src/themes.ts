@@ -19,3 +19,35 @@ export enum NewTheme {
   shadeTwo = "#333a42",
   borderColor = "#676767",
 }
+
+export type ThemeStruct = {
+  bgColor: string;
+  color: string;
+  cardColor: string;
+  routeBgColor: string;
+  routeColor: string;
+  borderColor: string;
+  btnColor: string;
+  hoverShade: string;
+};
+export const Dark: ThemeStruct = {
+  bgColor: "#15191c",
+  color: "#b4bac2",
+  routeColor: "#676767",
+  routeBgColor: "#23262b",
+  cardColor: "#2f333c",
+  borderColor: "#676767",
+  btnColor: "#23262b",
+  hoverShade: "#2f333c",
+};
+
+export const Light: ThemeStruct = {
+  bgColor: "#A6A6A6",
+  color: "black",
+  cardColor: "#A6A6A6",
+  routeBgColor: "#eee",
+  routeColor: "#eee",
+  borderColor: "#BEBEBE",
+  btnColor: "#eee",
+  hoverShade: "#C0C0C0",
+};

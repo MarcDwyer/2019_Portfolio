@@ -3,6 +3,7 @@ import { NavAppLink } from "./nav_link_styles";
 import { useLocation } from "react-router";
 
 import "./nav_link_styles.scss";
+import { ThemeStruct } from "../../../themes";
 
 const appLinks = [
   {
@@ -26,10 +27,10 @@ const appLinks = [
 type Props = {
   setToggle: (b: boolean) => void;
   toggle: boolean;
+  theme: ThemeStruct;
 };
-export default function NavLinks({ setToggle, toggle }: Props) {
+export default function NavLinks({ setToggle, toggle, theme }: Props) {
   const { pathname } = useLocation();
-  console.log(pathname);
   return (
     <div className="main-app-links">
       {appLinks.map((link, i) => {
@@ -38,6 +39,7 @@ export default function NavLinks({ setToggle, toggle }: Props) {
             to={link.match}
             key={i}
             onClick={() => setToggle(false)}
+            hoverShade={theme.hoverShade}
             style={{
               color: pathname === link.match ? "white" : "",
             }}

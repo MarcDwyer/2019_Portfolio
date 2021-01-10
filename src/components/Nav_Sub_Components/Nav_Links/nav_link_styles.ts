@@ -1,19 +1,20 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
-import { NewTheme } from "../../../themes";
+import { Link, NavLink } from "react-router-dom";
 
-export const NavAppLink = styled(Link)`
-width: 100%;
-background-color: transparent;
-height: 45px;
-margin-bottom: 5px;
-display: flex;
+type NavLinkProps = {
+  hoverShade: string;
+};
+export const NavAppLink = styled(Link)<NavLinkProps>`
+  width: 100%;
+  background-color: transparent;
+  height: 45px;
+  margin-bottom: 5px;
+  display: flex;
 
-span {
+  span {
     margin: auto;
-}
-
-&:hover {
-    background-color: ${NewTheme.shadeOne};
-}
+  }
+  &:hover {
+    background-color: ${(p) => p.hoverShade};
+  }
 `;

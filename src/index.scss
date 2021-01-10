@@ -4,8 +4,6 @@ body {
   height: 100vh;
   font-family: "Source Sans Pro", sans-serif;
   overflow: hidden;
-  color: #b4bac2;
-  background-color: #15191c;
 }
 
 code {
@@ -15,4 +13,14 @@ code {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+.container {
+  @media (max-width: 850px) {
+    position: absolute;
+    top: 55px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
 }

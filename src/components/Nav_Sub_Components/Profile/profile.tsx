@@ -1,25 +1,29 @@
-import React from "react";
 import { ImageUrls } from "../../../app_data/urls";
 
 import "./profile_styles.scss";
-import { NewTheme } from "../../../themes";
+import { ThemeStruct } from "../../../themes";
+import { observer } from "mobx-react-lite";
 
-export default function Profile() {
+type Props = {
+  theme: ThemeStruct;
+};
+function Profile({ theme }: Props) {
   return (
     <div className="profile-main">
       <img
         src={ImageUrls.myProfile}
         alt="profile"
-        style={{ border: `5px solid ${NewTheme.btnColor}` }}
+        style={{ border: `5px solid ${theme.borderColor}` }}
       />
       <div className="profile-content">
         <div className="headers">
           <h2>Marc Dwyer</h2>
           <h3>Web Developer</h3>
           <h4>US/EU citizen</h4>
-          {/* <span className="skills">JavaScript/TS Developer</span> */}
         </div>
       </div>
     </div>
   );
 }
+
+export default observer(Profile);
