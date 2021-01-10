@@ -1,2 +1,3 @@
-☐ Impl light and dark themes should correspond to OS's theme
+✔ Impl light and dark themes should correspond to OS's theme @done(21-01-10 02:08)
     Add localStorage functionality
+☐ Add konami code for roy @started(21-01-10 02:08)

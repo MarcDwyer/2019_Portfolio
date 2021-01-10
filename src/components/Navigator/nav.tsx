@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useState, useEffect } from "react";
 
 import MobileNav from "../Mobile_Nav/mobile_nav";
 import Profile from "../Nav_Sub_Components/Profile/profile";
@@ -11,10 +11,15 @@ import "./nav.scss";
 import { observer } from "mobx-react-lite";
 import { ThemeStore } from "../../store/theme_store";
 import { FaMoon, FaSun, FaToggleOff, FaToggleOn } from "react-icons/fa";
-type Props = {
+import { KonamiStore } from "../../store/konami_store";
+interface InitProps {
   ts: ThemeStore;
-};
-const Nav = observer(({ ts }: Props) => {
+}
+
+interface Props extends InitProps {
+  ks: KonamiStore;
+}
+const Nav = observer(({ ts, ks }: Props) => {
   const [toggle, setToggle] = useState<boolean>(false);
 
   const toggler = useCallback(() => setToggle(!toggle), [toggle]);
@@ -37,6 +42,14 @@ const Nav = observer(({ ts }: Props) => {
       </div>
     );
   };
+
+  useEffect(() => {
+    document.addEventListener("keydown", (e) => {
+      if (!ks.konami) {
+        ks.typed += e.key.toLowerCase();
+      }
+    });
+  }, []);
   return (
     <div
       className={`master-nav ${toggle ? "appear" : ""}`}
@@ -46,11 +59,11 @@ const Nav = observer(({ ts }: Props) => {
       }}
     >
       <NavSegment>
-      <div className="theme-toggler" onClick={() => ts.changeTheme()}>
-        {ThemeChanger()}
-      </div>
+        <div className="theme-toggler" onClick={() => ts.changeTheme()}>
+          {ThemeChanger()}
+        </div>
         <MobileNav toggler={toggler} />
-        <Profile theme={ts.theme} />
+        <Profile theme={ts.theme} ks={ks} />
         <NavLinks theme={ts.theme} setToggle={setToggle} toggle={toggle} />
         <NavSocialLinks />
       </NavSegment>
@@ -58,4 +71,4 @@ const Nav = observer(({ ts }: Props) => {
   );
 });
 
-export default Nav;
+export default ({ ts }: InitProps) => <Nav ts={ts} ks={new KonamiStore()} />;

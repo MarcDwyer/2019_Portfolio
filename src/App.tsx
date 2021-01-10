@@ -21,6 +21,7 @@ const App = observer(({ ts }: Props) => {
       .matchMedia("(prefers-color-scheme: dark)")
       .addEventListener("change", ts.handleMediaEvent);
   }, []);
+
   return (
     <MainContainer>
       <Router history={history}>

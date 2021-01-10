@@ -3,27 +3,32 @@ import { ImageUrls } from "../../../app_data/urls";
 import "./profile_styles.scss";
 import { ThemeStruct } from "../../../themes";
 import { observer } from "mobx-react-lite";
+import { KonamiStore } from "../../../store/konami_store";
 
-type Props = {
+interface Props {
   theme: ThemeStruct;
-};
-function Profile({ theme }: Props) {
+  ks: KonamiStore;
+}
+const Profile = observer(({ theme, ks }: Props) => {
+  console.log(ks.konami);
   return (
     <div className="profile-main">
       <img
-        src={ImageUrls.myProfile}
+        src={
+          ks.konami ? "https://i.imgur.com/a7yVYHV.png" : ImageUrls.myProfile
+        }
         alt="profile"
-        style={{ border: `5px solid ${theme.borderColor}` }}
+        style={{ border: `5px solid ${ks.konami ? "red" : theme.borderColor}` }}
       />
       <div className="profile-content">
         <div className="headers">
-          <h2>Marc Dwyer</h2>
-          <h3>Web Developer</h3>
-          <h4>US/EU citizen</h4>
+          <h2>{ks.konami ? "Roy Mustang" : "Marc Dwyer"}</h2>
+          <h3>{ks.konami ? "Fire Alchemist" : "Web Developer"}</h3>
+          <h4>{ks.konami ? "Amestris citizen" : "US/EU citizen"}</h4>
         </div>
       </div>
     </div>
   );
-}
+});
 
-export default observer(Profile);
+export default Profile;
