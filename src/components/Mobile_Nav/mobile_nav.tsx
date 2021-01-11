@@ -14,7 +14,7 @@ const MobileNav = ({ toggler, ts }: Props) => {
     <MobileNavbar bgcolor={ts.theme.bgColor}>
       <div className="burger-menu">
         <HamburgerMenu
-          color={ts.theme.btnColor}
+          color={ts.theme.hamburgercolor}
           fontSize="36px"
           onClick={toggler}
         />

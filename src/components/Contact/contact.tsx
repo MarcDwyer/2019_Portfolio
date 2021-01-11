@@ -3,7 +3,7 @@ import { useSpring, animated } from "react-spring";
 import { Container } from "../../styled-comps/containers";
 
 import "./contact.scss";
-import { NewTheme, ThemeStruct } from "../../themes";
+import { ThemeStruct } from "../../themes";
 import { observer } from "mobx-react-lite";
 type Props = {
   theme: ThemeStruct;
@@ -13,7 +13,6 @@ const Contact = observer(({ theme }: Props) => {
     transform: "translateX(0%)",
     opacity: 1,
     from: { transform: "translateX(-100%)", opacity: 0 },
-    delay: 100,
   });
 
   return (

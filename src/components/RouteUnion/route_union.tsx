@@ -18,16 +18,17 @@ export const RouteUnion = observer(({ ts }: Props) => {
         backgroundColor: ts.theme.routeBgColor,
         color: ts.theme.color,
         overflowY: "auto",
-        height: "100vh",
+        height: "100%",
         display: "flex",
         width: "100%",
         overflowX: "hidden",
       }}
+      className="container"
     >
       <Switch>
         <Route
           path="/projects"
-          render={(p) => <Projects {...p} borderColor={ts.theme.borderColor} />}
+          render={(p) => <Projects {...p} theme={ts.theme} />}
         />
         <Route
           path="/work"

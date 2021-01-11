@@ -29,6 +29,7 @@ export type ThemeStruct = {
   borderColor: string;
   btnColor: string;
   hoverShade: string;
+  hamburgercolor: string;
 };
 export const Dark: ThemeStruct = {
   bgColor: "#15191c",
@@ -39,10 +40,12 @@ export const Dark: ThemeStruct = {
   borderColor: "#676767",
   btnColor: "#23262b",
   hoverShade: "#2f333c",
+  hamburgercolor: "#F7850A",
 };
 
 export const Light: ThemeStruct = {
   bgColor: "#A6A6A6",
+  hamburgercolor: "#F7850A",
   color: "black",
   cardColor: "#A6A6A6",
   routeBgColor: "#eee",
