@@ -62,7 +62,7 @@ const Nav = observer(({ ts, ks }: Props) => {
         <div className="theme-toggler" onClick={() => ts.changeTheme()}>
           {ThemeChanger()}
         </div>
-        <MobileNav toggler={toggler} />
+        <MobileNav toggler={toggler} ts={ts} />
         <Profile theme={ts.theme} ks={ks} />
         <NavLinks theme={ts.theme} setToggle={setToggle} toggle={toggle} />
         <NavSocialLinks />

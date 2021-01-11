@@ -1,4 +1,4 @@
-import { action, makeObservable, observable, reaction } from "mobx";
+import { makeObservable, observable, reaction } from "mobx";
 
 export class KonamiStore {
   word: string = "roymustang";

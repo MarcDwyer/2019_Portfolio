@@ -11,8 +11,10 @@ export const HamburgerMenu = styled(FaHamburger)<PHamburger>`
   height: 95%;
   cursor: pointer;
 `;
-
-export const MobileNavbar = styled.nav`
+type MNProps = {
+  bgcolor: string;
+};
+export const MobileNavbar = styled.nav<MNProps>`
   position: fixed;
   top: 0;
   left: 0;
@@ -20,7 +22,7 @@ export const MobileNavbar = styled.nav`
   overflow: hidden;
   z-index: 1000;
   height: 55px;
-  background-color: ${NewTheme.navColor};
+  background-color: ${(p) => p.bgcolor};
   display: none;
 
   @media (max-width: 850px) {

@@ -3,17 +3,18 @@ import { createPortal } from "react-dom";
 import { MobileNavbar, HamburgerMenu } from "./mobile_nav_styles";
 
 import "./mobile_nav.scss";
-import { NewTheme } from "../../themes";
+import { ThemeStore } from "../../store/theme_store";
 
 type Props = {
   toggler: () => void;
+  ts: ThemeStore;
 };
-const MobileNav = ({ toggler }: Props) => {
+const MobileNav = ({ toggler, ts }: Props) => {
   return createPortal(
-    <MobileNavbar>
+    <MobileNavbar bgcolor={ts.theme.bgColor}>
       <div className="burger-menu">
         <HamburgerMenu
-          color={NewTheme.btnColor}
+          color={ts.theme.btnColor}
           fontSize="36px"
           onClick={toggler}
         />
